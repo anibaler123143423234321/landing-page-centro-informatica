@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/gex", "destination": "https://uss-gex.vercel.app/gex" },
+    { "source": "/gex/(.*)", "destination": "https://uss-gex.vercel.app/gex/$1" },
+    { "source": "/chatbot", "destination": "https://informatica-uss.vercel.app/chatbot" },
+    { "source": "/chatbot/(.*)", "destination": "https://informatica-uss.vercel.app/chatbot/$1" },
+    { "source": "/tickets", "destination": "https://informatica-uss.vercel.app/tickets" },
+    { "source": "/tickets/(.*)", "destination": "https://informatica-uss.vercel.app/tickets/$1" }
+  ]
 }
