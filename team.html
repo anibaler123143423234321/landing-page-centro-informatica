@@ -4,9 +4,9 @@
 <head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2" />
-        <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png?v=2" />
-        <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2" />
     <link rel="preload" href="/_next/static/media/0484562807a97172-s.p.woff2" as="font" crossorigin=""
         type="font/woff2" />
     <link rel="preload" href="/_next/static/media/8888a3826f4a3af4-s.p.woff2" as="font" crossorigin=""
@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="assets/css/77c2807a65d88134.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/52303002d95641c6.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/5e17cada4486c61d.css" data-precedence="next" />
-        <link rel="stylesheet" href="assets/css/custom-cinf.css?v=7" />
+    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=7" />
     <link rel="preload" as="image" href="assets/images/resource/team-7.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/team-8.jpg" />
     <link rel="preload" as="image" href="assets/images/shape/footer-shape.svg" />
@@ -51,424 +51,395 @@
     <meta name="next-size-adjust" />
     <style>
         .loader-wrap {
+            display: none !important;
+        }
+    </style>
     <style id="cinf-header-compact-inline">
-        /* ===================================================
+            /* ===================================================
    CINF USS - Header Modern & Responsive Styling
    =================================================== */
 
-        /* Container & Header Bounds */
-        .main-header {
-            background: #ffffff !important;
-            box-shadow: 0 2px 16px rgba(0, 43, 73, 0.07) !important;
-            border-bottom: 1px solid #eef2f6 !important;
-            position: relative !important;
-            z-index: 999 !important;
-        }
-
-        .main-header .auto-container,
-        .sticky-header .auto-container {
-            max-width: 1480px !important;
-            padding: 0 24px !important;
-            width: 100% !important;
-        }
-
-        .main-header .header-upper .inner-container,
-        .sticky-header .inner-container {
-            min-height: 70px !important;
-            height: 70px !important;
-            margin-bottom: 0 !important;
-            box-shadow: none !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-        }
-
-        /* Logo Sizing */
-        .header-upper .logo-box .logo,
-        .sticky-header .logo-box .logo {
-            padding: 8px 0 !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .header-upper .logo-box .logo img,
-        .sticky-header .logo-box .logo img {
-            max-height: 44px !important;
-            height: 44px !important;
-            width: auto !important;
-            object-fit: contain !important;
-        }
-
-        /* Divider between Logo and Nav */
-        .header-divider {
-            width: 1px;
-            height: 30px;
-            background: #e2e8f0;
-            margin: 0 22px;
-            display: inline-block;
-        }
-
-        /* Navigation items in a single, crisp row */
-        .nav-outer {
-            flex-wrap: nowrap !important;
-        }
-
-        .main-menu .navigation {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            align-items: center !important;
-            margin-bottom: 0 !important;
-            padding-left: 0 !important;
-        }
-
-        .main-menu .navigation>li {
-            position: relative !important;
-            padding: 22px 0 !important;
-            margin-right: 22px !important;
-            white-space: nowrap !important;
-        }
-
-        .main-menu .navigation>li:last-child {
-            margin-right: 0 !important;
-        }
-
-        .main-menu .navigation>li>a {
-            font-size: 14.5px !important;
-            font-weight: 600 !important;
-            color: #1e293b !important;
-            padding: 6px 2px !important;
-            line-height: 24px !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .main-menu .navigation>li:hover>a,
-        .main-menu .navigation>li.current>a {
-            color: #002B49 !important;
-        }
-
-        .main-menu .navigation>li:before {
-            bottom: 12px !important;
-            height: 3px !important;
-            background: #00b4d8 !important;
-            border-radius: 2px !important;
-        }
-
-        /* Dropdown Arrow - Clean & Crisp CSS Chevron */
-        .main-menu .navigation>li.dropdown>a {
-            padding-right: 0 !important;
-        }
-
-        .main-menu .navigation>li.dropdown>a:before {
-            display: none !important;
-            content: none !important;
-        }
-
-        .main-menu .navigation>li.dropdown>a:after {
-            content: "" !important;
-            display: inline-block !important;
-            width: 5px !important;
-            height: 5px !important;
-            border-right: 1.5px solid currentColor !important;
-            border-bottom: 1.5px solid currentColor !important;
-            transform: rotate(45deg) !important;
-            margin-left: 6px !important;
-            margin-bottom: 3px !important;
-            vertical-align: middle !important;
-            position: static !important;
-            transition: transform 0.2s ease !important;
-        }
-
-        .main-menu .navigation>li.dropdown:hover>a:after {
-            transform: rotate(-135deg) !important;
-            margin-bottom: -1px !important;
-        }
-
-        /* Dropdown Menu - Clean White Background & High Contrast */
-        .main-menu .navigation>li>ul,
-        .main-menu .navigation>li>ul>li>ul {
-            position: absolute !important;
-            top: 100% !important;
-            background: #ffffff !important;
-            background-color: #ffffff !important;
-            border-radius: 10px !important;
-            border: 1px solid #e2e8f0 !important;
-            border-top: 3px solid #002B49 !important;
-            box-shadow: 0 14px 36px rgba(0, 43, 73, 0.12) !important;
-            padding: 8px 0 !important;
-            min-width: 275px !important;
-            overflow: hidden !important;
-            z-index: 9999 !important;
-        }
-
-        .main-menu .navigation>li>ul>li,
-        .main-menu .navigation>li>ul>li>ul>li {
-            padding: 0 !important;
-            margin: 0 !important;
-            background: transparent !important;
-            width: 100% !important;
-        }
-
-        .main-menu .navigation>li>ul>li:before,
-        .main-menu .navigation>li>ul>li>ul>li:before {
-            display: none !important;
-        }
-
-        .main-menu .navigation>li>ul>li>a,
-        .main-menu .navigation>li>ul>li>ul>li>a {
-            position: relative !important;
-            display: block !important;
-            padding: 10px 20px !important;
-            font-size: 13.5px !important;
-            font-weight: 500 !important;
-            color: #334155 !important;
-            line-height: 22px !important;
-            text-align: left !important;
-            border-bottom: 1px solid #f8fafc !important;
-            background: transparent !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .main-menu .navigation>li>ul>li:last-child>a,
-        .main-menu .navigation>li>ul>li>ul>li:last-child>a {
-            border-bottom: none !important;
-        }
-
-        .main-menu .navigation>li>ul>li>a:hover,
-        .main-menu .navigation>li>ul>li>ul>li>a:hover {
-            background-color: #f0f7ff !important;
-            color: #002B49 !important;
-            font-weight: 600 !important;
-            padding-left: 24px !important;
-        }
-
-        /* Right Column */
-        .right-column {
-            display: flex !important;
-            align-items: center !important;
-            flex-shrink: 0 !important;
-            gap: 12px !important;
-        }
-
-        .header-wa-btn {
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 9px !important;
-            padding: 6px 14px 6px 8px !important;
-            background: #f8fafc !important;
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 50px !important;
-            text-decoration: none !important;
-            transition: all 0.25s ease !important;
-        }
-
-        .header-wa-btn:hover {
-            background: #ecfdf5 !important;
-            border-color: #86efac !important;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15) !important;
-        }
-
-        .header-wa-icon {
-            width: 32px !important;
-            height: 32px !important;
-            border-radius: 50% !important;
-            background: #25D366 !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            color: #ffffff !important;
-            flex-shrink: 0 !important;
-        }
-
-        .header-wa-text {
-            display: flex !important;
-            flex-direction: column !important;
-            text-align: left !important;
-        }
-
-        .header-wa-label {
-            font-size: 9.5px !important;
-            font-weight: 700 !important;
-            color: #64748b !important;
-            letter-spacing: 0.5px !important;
-            text-transform: uppercase !important;
-            line-height: 1 !important;
-            margin-bottom: 2px !important;
-        }
-
-        .header-wa-number {
-            font-size: 13.5px !important;
-            font-weight: 700 !important;
-            color: #002B49 !important;
-            line-height: 1 !important;
-        }
-
-        .header-portal-btn {
-            display: inline-flex !important;
-            align-items: center !important;
-            padding: 8px 16px !important;
-            background: #002B49 !important;
-            color: #ffffff !important;
-            font-size: 13px !important;
-            font-weight: 600 !important;
-            border-radius: 6px !important;
-            text-decoration: none !important;
-            transition: all 0.2s ease !important;
-            box-shadow: 0 2px 6px rgba(0, 43, 73, 0.2) !important;
-            white-space: nowrap !important;
-        }
-
-        .header-portal-btn:hover {
-            background: #004b80 !important;
-            color: #ffffff !important;
-            transform: translateY(-1px) !important;
-        }
-
-        /* Sticky Header Adjustments */
-        .fixed-header .sticky-header {
-            background: #ffffff !important;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
-        }
-
-        .sticky-header .main-menu .navigation>li {
-            padding: 18px 0 !important;
-            margin-right: 22px !important;
-        }
-
-        /* Responsive adjustment for laptops */
-        @media (max-width: 1240px) and (min-width: 992px) {
-            .main-menu .navigation>li {
-                margin-right: 14px !important;
-            }
-
-            .main-menu .navigation>li>a {
-                font-size: 13.5px !important;
-            }
-
-            .header-divider {
-                margin: 0 14px !important;
-            }
-
-            .header-portal-btn {
-                padding: 7px 12px !important;
-                font-size: 12px !important;
-            }
-        }
-
-        /* ===================================================
-           Desktop Navigation: Mobile Nav Toggler MUST BE HIDDEN
-           =================================================== */
-        .mobile-nav-toggler,
-        .nav-outer .mobile-nav-toggler,
-        .right-column .mobile-nav-toggler {
-            display: none !important;
-        }
-
-        /* ===================================================
-           CRITICAL MOBILE FIX (@media max-width: 991px)
-           Prevents header items from overlapping banner slider
-           =================================================== */
-        @media (max-width: 991px) {
-
-            .main-header .header-upper .inner-container,
-            .sticky-header .inner-container {
-                min-height: 62px !important;
-                height: 62px !important;
-                padding: 0 8px !important;
-                flex-wrap: nowrap !important;
-                overflow: hidden !important;
+            /* Container & Header Bounds */
+            .main-header {
+                background: #ffffff !important;
+                box-shadow: 0 2px 16px rgba(0, 43, 73, 0.07) !important;
+                border-bottom: 1px solid #eef2f6 !important;
+                position: relative !important;
+                z-index: 999 !important;
             }
 
             .main-header .auto-container,
             .sticky-header .auto-container {
-                padding: 0 12px !important;
+                max-width: 1480px !important;
+                padding: 0 24px !important;
+                width: 100% !important;
+            }
+
+            .main-header .header-upper .inner-container,
+            .sticky-header .inner-container {
+                min-height: 70px !important;
+                height: 70px !important;
+                margin-bottom: 0 !important;
+                box-shadow: none !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+            }
+
+            /* Logo Sizing */
+            .header-upper .logo-box .logo,
+            .sticky-header .logo-box .logo {
+                padding: 8px 0 !important;
+                display: flex !important;
+                align-items: center !important;
             }
 
             .header-upper .logo-box .logo img,
             .sticky-header .logo-box .logo img {
-                max-height: 38px !important;
-                height: 38px !important;
+                max-height: 44px !important;
+                height: 44px !important;
+                width: auto !important;
+                object-fit: contain !important;
             }
 
+            /* Divider between Logo and Nav */
             .header-divider {
+                width: 1px;
+                height: 30px;
+                background: #e2e8f0;
+                margin: 0 22px;
+                display: inline-block;
+            }
+
+            /* Navigation items in a single, crisp row */
+            .nav-outer {
+                flex-wrap: nowrap !important;
+            }
+
+            .main-menu .navigation {
+                display: flex !important;
+                flex-wrap: nowrap !important;
+                align-items: center !important;
+                margin-bottom: 0 !important;
+                padding-left: 0 !important;
+            }
+
+            .main-menu .navigation>li {
+                position: relative !important;
+                padding: 22px 0 !important;
+                margin-right: 22px !important;
+                white-space: nowrap !important;
+            }
+
+            .main-menu .navigation>li:last-child {
+                margin-right: 0 !important;
+            }
+
+            .main-menu .navigation>li>a {
+                font-size: 14.5px !important;
+                font-weight: 600 !important;
+                color: #1e293b !important;
+                padding: 6px 2px !important;
+                line-height: 24px !important;
+                transition: all 0.2s ease !important;
+            }
+
+            .main-menu .navigation>li:hover>a,
+            .main-menu .navigation>li.current>a {
+                color: #002B49 !important;
+            }
+
+            .main-menu .navigation>li:before {
+                bottom: 12px !important;
+                height: 3px !important;
+                background: #00b4d8 !important;
+                border-radius: 2px !important;
+            }
+
+            /* Dropdown Arrow - Clean & Crisp CSS Chevron */
+            .main-menu .navigation>li.dropdown>a {
+                padding-right: 0 !important;
+            }
+
+            .main-menu .navigation>li.dropdown>a:before {
+                display: none !important;
+                content: none !important;
+            }
+
+            .main-menu .navigation>li.dropdown>a:after {
+                content: "" !important;
+                display: inline-block !important;
+                width: 5px !important;
+                height: 5px !important;
+                border-right: 1.5px solid currentColor !important;
+                border-bottom: 1.5px solid currentColor !important;
+                transform: rotate(45deg) !important;
+                margin-left: 6px !important;
+                margin-bottom: 3px !important;
+                vertical-align: middle !important;
+                position: static !important;
+                transition: transform 0.2s ease !important;
+            }
+
+            .main-menu .navigation>li.dropdown:hover>a:after {
+                transform: rotate(-135deg) !important;
+                margin-bottom: -1px !important;
+            }
+
+            /* Dropdown Menu - Clean White Background & High Contrast */
+            .main-menu .navigation>li>ul,
+            .main-menu .navigation>li>ul>li>ul {
+                position: absolute !important;
+                top: 100% !important;
+                background: #ffffff !important;
+                background-color: #ffffff !important;
+                border-radius: 10px !important;
+                border: 1px solid #e2e8f0 !important;
+                border-top: 3px solid #002B49 !important;
+                box-shadow: 0 14px 36px rgba(0, 43, 73, 0.12) !important;
+                padding: 8px 0 !important;
+                min-width: 275px !important;
+                overflow: hidden !important;
+                z-index: 9999 !important;
+            }
+
+            .main-menu .navigation>li>ul>li,
+            .main-menu .navigation>li>ul>li>ul>li {
+                padding: 0 !important;
+                margin: 0 !important;
+                background: transparent !important;
+                width: 100% !important;
+            }
+
+            .main-menu .navigation>li>ul>li:before,
+            .main-menu .navigation>li>ul>li>ul>li:before {
                 display: none !important;
             }
 
-            /* Hide desktop-only elements from mobile top bar */
-            .theme-btn.search-toggler {
-                display: none !important;
+            .main-menu .navigation>li>ul>li>a,
+            .main-menu .navigation>li>ul>li>ul>li>a {
+                position: relative !important;
+                display: block !important;
+                padding: 10px 20px !important;
+                font-size: 13.5px !important;
+                font-weight: 500 !important;
+                color: #334155 !important;
+                line-height: 22px !important;
+                text-align: left !important;
+                border-bottom: 1px solid #f8fafc !important;
+                background: transparent !important;
+                transition: all 0.2s ease !important;
             }
 
-            .header-portal-btn {
-                display: none !important;
+            .main-menu .navigation>li>ul>li:last-child>a,
+            .main-menu .navigation>li>ul>li>ul>li:last-child>a {
+                border-bottom: none !important;
             }
 
-            .header-wa-text {
-                display: none !important;
+            .main-menu .navigation>li>ul>li>a:hover,
+            .main-menu .navigation>li>ul>li>ul>li>a:hover {
+                background-color: #f0f7ff !important;
+                color: #002B49 !important;
+                font-weight: 600 !important;
+                padding-left: 24px !important;
+            }
+
+            /* Right Column */
+            .right-column {
+                display: flex !important;
+                align-items: center !important;
+                flex-shrink: 0 !important;
+                gap: 12px !important;
             }
 
             .header-wa-btn {
-                padding: 0 !important;
-                border: none !important;
-                background: transparent !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 9px !important;
+                padding: 6px 14px 6px 8px !important;
+                background: #f8fafc !important;
+                border: 1px solid #e2e8f0 !important;
+                border-radius: 50px !important;
+                text-decoration: none !important;
+                transition: all 0.25s ease !important;
+            }
+
+            .header-wa-btn:hover {
+                background: #ecfdf5 !important;
+                border-color: #86efac !important;
+                box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15) !important;
             }
 
             .header-wa-icon {
-                width: 36px !important;
-                height: 36px !important;
+                width: 32px !important;
+                height: 32px !important;
+                border-radius: 50% !important;
+                background: #25D366 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                color: #ffffff !important;
+                flex-shrink: 0 !important;
             }
 
-            .right-column {
-                gap: 8px !important;
+            .header-wa-text {
+                display: flex !important;
+                flex-direction: column !important;
+                text-align: left !important;
             }
 
-            /* ONLY show hamburger button on mobile screens (<= 991px) */
+            .header-wa-label {
+                font-size: 9.5px !important;
+                font-weight: 700 !important;
+                color: #64748b !important;
+                letter-spacing: 0.5px !important;
+                text-transform: uppercase !important;
+                line-height: 1 !important;
+                margin-bottom: 2px !important;
+            }
+
+            .header-wa-number {
+                font-size: 13.5px !important;
+                font-weight: 700 !important;
+                color: #002B49 !important;
+                line-height: 1 !important;
+            }
+
+            .header-portal-btn {
+                display: inline-flex !important;
+                align-items: center !important;
+                padding: 8px 16px !important;
+                background: #002B49 !important;
+                color: #ffffff !important;
+                font-size: 13px !important;
+                font-weight: 600 !important;
+                border-radius: 6px !important;
+                text-decoration: none !important;
+                transition: all 0.2s ease !important;
+                box-shadow: 0 2px 6px rgba(0, 43, 73, 0.2) !important;
+                white-space: nowrap !important;
+            }
+
+            .header-portal-btn:hover {
+                background: #004b80 !important;
+                color: #ffffff !important;
+                transform: translateY(-1px) !important;
+            }
+
+            /* Sticky Header Adjustments */
+            .fixed-header .sticky-header {
+                background: #ffffff !important;
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+            }
+
+            .sticky-header .main-menu .navigation>li {
+                padding: 18px 0 !important;
+                margin-right: 22px !important;
+            }
+
+            /* Responsive adjustment for laptops */
+            @media (max-width: 1240px) and (min-width: 992px) {
+                .main-menu .navigation>li {
+                    margin-right: 14px !important;
+                }
+
+                .main-menu .navigation>li>a {
+                    font-size: 13.5px !important;
+                }
+
+                .header-divider {
+                    margin: 0 14px !important;
+                }
+
+                .header-portal-btn {
+                    padding: 7px 12px !important;
+                    font-size: 12px !important;
+                }
+            }
+
+            /* ===================================================
+           Desktop Navigation: Mobile Nav Toggler MUST BE HIDDEN
+           =================================================== */
             .mobile-nav-toggler,
+            .nav-outer .mobile-nav-toggler,
             .right-column .mobile-nav-toggler {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                cursor: pointer !important;
-                margin-left: 6px !important;
-                order: 3 !important;
-            }
-
-            .mobile-nav-toggler img {
-                width: 32px !important;
-                height: 32px !important;
-            }
-        }
-    </style>
-            display: none !important;
-        }
-
-        .mobile-nav-toggler {
-            display: none !important;
-        }
-
-        @media (max-width: 991px) {
-            .mobile-nav-toggler {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                cursor: pointer !important;
-                margin-left: 8px !important;
-                order: 3 !important;
-            }
-
-            .mobile-nav-toggler img {
-                width: 32px !important;
-                height: 32px !important;
-            }
-
-            .contact-info-1-phone-tel,
-            .contact-info-1-phone-number {
                 display: none !important;
             }
 
-            .search-toggler {
-                display: none !important;
+            /* ===================================================
+           CRITICAL MOBILE FIX (@media max-width: 991px)
+           Prevents header items from overlapping banner slider
+           =================================================== */
+            @media (max-width: 991px) {
+
+                .main-header .header-upper .inner-container,
+                .sticky-header .inner-container {
+                    min-height: 62px !important;
+                    height: 62px !important;
+                    padding: 0 8px !important;
+                    flex-wrap: nowrap !important;
+                    overflow: hidden !important;
+                }
+
+                .main-header .auto-container,
+                .sticky-header .auto-container {
+                    padding: 0 12px !important;
+                }
+
+                .header-upper .logo-box .logo img,
+                .sticky-header .logo-box .logo img {
+                    max-height: 38px !important;
+                    height: 38px !important;
+                }
+
+                .header-divider {
+                    display: none !important;
+                }
+
+                /* Hide desktop-only elements from mobile top bar */
+                .theme-btn.search-toggler {
+                    display: none !important;
+                }
+
+                .header-portal-btn {
+                    display: none !important;
+                }
+
+                .header-wa-text {
+                    display: none !important;
+                }
+
+                .header-wa-btn {
+                    padding: 0 !important;
+                    border: none !important;
+                    background: transparent !important;
+                }
+
+                .header-wa-icon {
+                    width: 36px !important;
+                    height: 36px !important;
+                }
+
+                .right-column {
+                    gap: 8px !important;
+                }
+
+                /* ONLY show hamburger button on mobile screens (<= 991px) */
+                .mobile-nav-toggler,
+                .right-column .mobile-nav-toggler {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    cursor: pointer !important;
+                    margin-left: 6px !important;
+                    order: 3 !important;
+                }
+
+                .mobile-nav-toggler img {
+                    width: 32px !important;
+                    height: 32px !important;
+                }
             }
-        }
     </style>
 </head>
 
@@ -1167,7 +1138,7 @@
                 </div>
             </div>
         </footer>
-    </div>0<!--/$-->
+    </div><!--/$-->
 
     <script src="assets/js/main.js"></script>
 </body>
