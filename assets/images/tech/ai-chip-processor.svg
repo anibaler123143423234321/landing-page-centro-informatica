@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#073299"/>
+      <stop offset="100%" stop-color="#7B2CBF"/>
+    </linearGradient>
+    <linearGradient id="goldPin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Silicon Chip Outer Body -->
+  <rect x="18" y="18" width="44" height="44" rx="8" fill="url(#chipGrad)" stroke="#334155" stroke-width="2"/>
+  <!-- Gold Contact Pins (Top & Bottom) -->
+  <g fill="url(#goldPin)">
+    <rect x="24" y="10" width="3.5" height="8" rx="1.5"/>
+    <rect x="32" y="10" width="3.5" height="8" rx="1.5"/>
+    <rect x="40" y="10" width="3.5" height="8" rx="1.5"/>
+    <rect x="48" y="10" width="3.5" height="8" rx="1.5"/>
+    <rect x="56" y="10" width="3.5" height="8" rx="1.5"/>
+
+    <rect x="24" y="62" width="3.5" height="8" rx="1.5"/>
+    <rect x="32" y="62" width="3.5" height="8" rx="1.5"/>
+    <rect x="40" y="62" width="3.5" height="8" rx="1.5"/>
+    <rect x="48" y="62" width="3.5" height="8" rx="1.5"/>
+    <rect x="56" y="62" width="3.5" height="8" rx="1.5"/>
+  </g>
+  <!-- Gold Contact Pins (Left & Right) -->
+  <g fill="url(#goldPin)">
+    <rect x="10" y="24" width="8" height="3.5" rx="1.5"/>
+    <rect x="10" y="32" width="8" height="3.5" rx="1.5"/>
+    <rect x="10" y="40" width="8" height="3.5" rx="1.5"/>
+    <rect x="10" y="48" width="8" height="3.5" rx="1.5"/>
+    <rect x="10" y="56" width="8" height="3.5" rx="1.5"/>
+
+    <rect x="62" y="24" width="8" height="3.5" rx="1.5"/>
+    <rect x="62" y="32" width="8" height="3.5" rx="1.5"/>
+    <rect x="62" y="40" width="8" height="3.5" rx="1.5"/>
+    <rect x="62" y="48" width="8" height="3.5" rx="1.5"/>
+    <rect x="62" y="56" width="8" height="3.5" rx="1.5"/>
+  </g>
+  <!-- Inner Neural Core -->
+  <rect x="27" y="27" width="26" height="26" rx="5" fill="url(#coreGrad)"/>
+  <!-- Circuit Traces inside -->
+  <path d="M 27 34 L 32 34 L 36 38 L 44 38 L 48 34 L 53 34" stroke="#00E5FF" stroke-width="1.2" fill="none" opacity="0.8"/>
+  <path d="M 27 46 L 33 46 L 37 42 L 43 42 L 47 46 L 53 46" stroke="#00E5FF" stroke-width="1.2" fill="none" opacity="0.8"/>
+  <!-- Central "AI" Text / Core Symbol -->
+  <text x="40" y="44" fill="#FFFFFF" font-family="monospace, sans-serif" font-weight="900" font-size="12" text-anchor="middle" letter-spacing="1">AI</text>
+  <!-- Glowing Corner Status LEDs -->
+  <circle cx="23" cy="23" r="1.5" fill="#10B981"/>
+  <circle cx="57" cy="23" r="1.5" fill="#00E5FF"/>
+  <circle cx="23" cy="57" r="1.5" fill="#3B82F6"/>
+  <circle cx="57" cy="57" r="1.5" fill="#F59E0B"/>
+</svg>
+

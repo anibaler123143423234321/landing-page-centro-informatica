@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 242" width="100%" height="100%">
+  <defs>
+    <!-- Official Microsoft Azure Gradients -->
+    <linearGradient id="azureGradMain" x1="58.97%" y1="7.41%" x2="37.19%" y2="100%">
+      <stop offset="0%" stop-color="#114A8B"/>
+      <stop offset="100%" stop-color="#0669BC"/>
+    </linearGradient>
+    <linearGradient id="azureGradShadow" x1="59.72%" y1="52.31%" x2="52.69%" y2="54.86%">
+      <stop offset="0%" stop-color="#001833" stop-opacity="0.3"/>
+      <stop offset="7.1%" stop-color="#001833" stop-opacity="0.2"/>
+      <stop offset="32.1%" stop-color="#001833" stop-opacity="0.1"/>
+      <stop offset="62.3%" stop-color="#001833" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#001833" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Official Microsoft Azure Fluent "A" Symbol - 100% Transparent -->
+  <!-- Left Leg / Base Pillar -->
+  <path fill="url(#azureGradMain)" d="M85.34 0h75.75L82.46 233a12.08 12.08 0 0 1-11.44 8.22H12.06A12.06 12.06 0 0 1 .63 225.3L73.9 8.22A12.08 12.08 0 0 1 85.34 0z"/>
+
+  <!-- Horizontal Crossbar Fold -->
+  <path fill="#0078D4" d="M195.42 156.28H75.3a5.56 5.56 0 0 0-3.8 9.63l77.19 72.05a12.14 12.14 0 0 0 8.28 3.26h68.02z"/>
+
+  <!-- Shadow Fold Angle -->
+  <path fill="url(#azureGradShadow)" d="M85.34 0a11.98 11.98 0 0 0-11.47 8.38L.72 225.1a12.05 12.05 0 0 0 11.37 16.12h60.48a12.93 12.93 0 0 0 9.92-8.44l14.59-42.99 52.1 48.6a12.33 12.33 0 0 0 7.76 2.83h67.77l-29.72-84.94-86.64.02L161.37 0z"/>
+
+  <!-- Top-Right Cyan Facet -->
+  <path fill="#3CCBF4" d="M161.37 0l-76.03 0L134.82 142.2h86.64z"/>
+</svg>

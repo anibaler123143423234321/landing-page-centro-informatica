@@ -4,7 +4,9 @@
 <head>
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" href="assets/images/logo-cinf-uss.png" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png?v=2" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="assets/images/favicon.png?v=2" />
     <link rel="preload" as="image" href="assets/images/logo-cinf-uss.png" />
     <link rel="preload" as="image" href="assets/images/shape/shape-1.png" />
     <link rel="preload" as="image" href="assets/images/icons/icon-bar-2.png" />
@@ -13,8 +15,8 @@
     <link rel="preload" as="image" href="assets/images/resource/feature-image-1.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/feature-image-2.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/feature-image-3.jpg" />
-    <link rel="preload" as="image" href="assets/images/shape/shape-3.png" />
-    <link rel="preload" as="image" href="assets/images/shape/shape-2.png" />
+    <link rel="preload" as="image" href="assets/images/shape/shape-microsoft.svg" />
+    <link rel="preload" as="image" href="assets/images/shape/shape-gemini.svg" />
     <link rel="stylesheet" href="assets/css/0f9f4fd29e0d7902.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/56769c18c9c732ca.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/b5fcfb40d7ba3ac0.css" data-precedence="next" />
@@ -23,7 +25,7 @@
     <link rel="stylesheet" href="assets/css/77c2807a65d88134.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/52303002d95641c6.css" data-precedence="next" />
     <link rel="stylesheet" href="assets/css/5e17cada4486c61d.css" data-precedence="next" />
-    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=4" />
+    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=7" />
     <link rel="preload" as="image" href="assets/images/resource/about.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/service-1.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/service-2.jpg" />
@@ -359,9 +361,18 @@
         }
 
         /* ===================================================
-   CRITICAL MOBILE FIX (@media max-width: 991px)
-   Prevents header items from overlapping banner slider
-   =================================================== */
+           Desktop Navigation: Mobile Nav Toggler MUST BE HIDDEN
+           =================================================== */
+        .mobile-nav-toggler,
+        .nav-outer .mobile-nav-toggler,
+        .right-column .mobile-nav-toggler {
+            display: none !important;
+        }
+
+        /* ===================================================
+           CRITICAL MOBILE FIX (@media max-width: 991px)
+           Prevents header items from overlapping banner slider
+           =================================================== */
         @media (max-width: 991px) {
 
             .main-header .header-upper .inner-container,
@@ -416,24 +427,20 @@
                 gap: 8px !important;
             }
 
-            .mobile-nav-toggler {
-                display: none !important;
+            /* ONLY show hamburger button on mobile screens (<= 991px) */
+            .mobile-nav-toggler,
+            .right-column .mobile-nav-toggler {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                cursor: pointer !important;
+                margin-left: 6px !important;
+                order: 3 !important;
             }
 
-            @media (max-width: 991px) {
-                .mobile-nav-toggler {
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    cursor: pointer !important;
-                    margin-left: 6px !important;
-                    order: 3 !important;
-                }
-
-                .mobile-nav-toggler img {
-                    width: 32px !important;
-                    height: 32px !important;
-                }
+            .mobile-nav-toggler img {
+                width: 32px !important;
+                height: 32px !important;
             }
         }
     </style>
@@ -875,9 +882,9 @@
                     <h2 class="section_heading_title_big">Plataforma de Atención &amp; <br />Acreditación Estudiantil
                     </h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-1-block text-center wow fadeInLeft" data-wow-delay=".2s"
+                <div class="row feature-cards-row">
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="feature-1-block text-center wow fadeInLeft w-100" data-wow-delay=".2s"
                             data-wow-duration=".8s">
                             <div class="feature-1-image hvr-img-zoom-1">
                                 <img src="assets/images/resource/feature-image-1.jpg" alt="Chatbot CINF" />
@@ -887,33 +894,31 @@
                                 de computación y tickets de soporte sin esperas.</p>
                             <div class="feature-1-link">
                                 <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/chatbot"
-                                    target="_blank" title="Probar Chatbot">
-                                    <i class="icon-5">
-                                    </i>
+                                    target="_blank" title="Probar Chatbot CINF 24/7">
+                                    <img src="assets/images/tech/ai-chatbot-assistant.svg" alt="Chatbot CINF 24/7" />
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-1-block text-center wow fadeInLeft" data-wow-delay=".4s"
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="feature-1-block text-center wow fadeInLeft w-100" data-wow-delay=".4s"
                             data-wow-duration=".8s">
                             <div class="feature-1-image hvr-img-zoom-1">
                                 <img src="assets/images/resource/feature-image-2.jpg" alt="Acreditación Computación" />
                             </div>
                             <h4 class="feature-1-title">Acreditación en Computación</h4>
-                            <p class="feature-1-text">Cumple tu requisito curricular de grado con la ruta PROTECH XP
-                                o el Plan Tradicional.</p>
+                            <p class="feature-1-text">Cumple tu requisito curricular de grado académico con la ruta
+                                PROTECH XP o el Plan Tradicional oficial.</p>
                             <div class="feature-1-link">
                                 <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="pricing-table.html"
                                     title="Ver Requisitos y Tarifas">
-                                    <i class="icon-6">
-                                    </i>
+                                    <img src="assets/images/tech/tech-certification-badge.svg" alt="Acreditación Oficial SUNEDU" />
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="feature-1-block text-center wow fadeInLeft" data-wow-delay=".6s"
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="feature-1-block text-center wow fadeInLeft w-100" data-wow-delay=".6s"
                             data-wow-duration=".8s">
                             <div class="feature-1-image hvr-img-zoom-1">
                                 <a href="/gex" title="Ingresar al Portal GEX">
@@ -928,8 +933,7 @@
                             <div class="feature-1-link">
                                 <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/gex"
                                     title="Ingresar al Portal GEX">
-                                    <i class="icon-7">
-                                    </i>
+                                    <img src="assets/images/tech/cloud-network.svg" alt="Cisco & Google Cloud GEX" />
                                 </a>
                             </div>
                         </div>
@@ -938,15 +942,15 @@
             </div>
         </section>
         <section class="section-padding pt-0">
-            <div class="about-1-shape-2" data-parallax="{&quot;y&quot;: -50}">
-                <img src="assets/images/shape/shape-3.png" alt="" />
-            </div>
-            <div class="auto-container">
+            <div class="auto-container p_relative">
+                <div class="about-1-shape-2" data-parallax="{&quot;y&quot;: -50}">
+                    <img src="assets/images/shape/shape-microsoft.svg" alt="Microsoft MOS &amp; Cisco Academy" />
+                </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="about-1-image-wrap text-center mb_30 p_relative">
                             <div class="about-1-shape-1" data-parallax="{&quot;y&quot;: -50}">
-                                <img src="assets/images/shape/shape-2.png" alt="" />
+                                <img src="assets/images/shape/shape-gemini.svg" alt="Google Gemini AI CINF" />
                             </div>
                             <div class="d_iblock">
                                 <div class="about-1-image-1 hvr-img-zoom-1">
@@ -1284,17 +1288,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Docente 3: Katherine Olivos -->
+                    <!-- Docente 3: Ing. Katherin Olivos -->
                     <div class="col-lg-3 col-md-6">
                         <div class="team-1-block">
                             <div class="team-1-image">
                                 <div class="team-1-image-wrap">
                                     <img src="assets/images/resource/team-3.jpg"
-                                        alt="Katherine Olivos - Coordinadora CIS" />
+                                        alt="Ing. Katherin Olivos - Coordinadora CIS" />
                                 </div>
                             </div>
                             <div class="team-1-content">
-                                <h4 class="team-1-title">Katherine Olivos</h4>
+                                <h4 class="team-1-title">Ing. Katherin Olivos</h4>
                                 <p class="team-1-designaiton c_primary mb_10">Coordinadora CIS</p>
                                 <p>Coordinación académica, programación docente y seguimiento estudiantil del Centro de
                                     Informática.</p>

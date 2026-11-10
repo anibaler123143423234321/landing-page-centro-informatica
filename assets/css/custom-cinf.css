@@ -261,6 +261,28 @@
     display: none !important;
 }
 
+/* ===================================================
+   Mobile Nav Toggler (ONLY visible on Mobile <= 991px)
+   =================================================== */
+.mobile-nav-toggler,
+.nav-outer .mobile-nav-toggler,
+.right-column .mobile-nav-toggler,
+.navbar-right-info .mobile-nav-toggler {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggler,
+    .right-column .mobile-nav-toggler {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        margin-left: 6px !important;
+        order: 3 !important;
+    }
+}
+
 /* Sticky Header Adjustments */
 .fixed-header .sticky-header {
     background: #ffffff !important;
@@ -292,3 +314,173 @@
         font-size: 13.5px !important;
     }
 }
+
+/* ===================================================
+   Tech SVG Icons & Floating Badges (Centro de Informática)
+   =================================================== */
+
+/* Feature Card Action Buttons */
+.feature-1-link-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    line-height: normal !important;
+}
+
+.feature-1-link-btn img,
+.feature-1-link-btn svg {
+    width: 44px !important;
+    height: 44px !important;
+    object-fit: contain !important;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.feature-1-link-btn:hover img,
+.feature-1-link-btn:hover svg {
+    transform: scale(1.18) !important;
+}
+
+/* ===================================================
+   Feature Cards Equal Height & Alignment Fix
+   =================================================== */
+.feature-cards-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.feature-cards-row > [class*="col-"] {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.feature-cards-row .feature-1-block {
+    display: flex !important;
+    flex-direction: column !important;
+    height: calc(100% - 60px) !important;
+    width: 100% !important;
+    margin-bottom: 60px !important;
+}
+
+.feature-cards-row .feature-1-block .feature-1-image {
+    flex-shrink: 0 !important;
+    margin-bottom: 20px !important;
+}
+
+.feature-cards-row .feature-1-block h4.feature-1-title {
+    flex-shrink: 0 !important;
+    min-height: 32px !important;
+    margin-bottom: 12px !important;
+}
+
+.feature-cards-row .feature-1-block p.feature-1-text {
+    flex-grow: 1 !important;
+    min-height: 84px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 0 !important;
+    padding: 0 15px 25px !important;
+}
+
+.feature-cards-row .feature-1-block .feature-1-link {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+}
+
+/* Floating Tech Shapes (Transparent, no background container) */
+.about-1-shape-1 img {
+    width: 130px !important;
+    max-width: 130px !important;
+    height: auto !important;
+    filter: drop-shadow(0 10px 25px rgba(66, 133, 244, 0.25)) !important;
+    animation: cinfFloat 6s ease-in-out infinite alternate !important;
+}
+
+/* Microsoft Shape: Brought inside container and shifted left */
+.about-1-shape-2 {
+    display: block !important;
+    position: absolute !important;
+    right: 35px !important;
+    top: -55px !important;
+    z-index: 5 !important;
+}
+
+.about-1-shape-2 img {
+    width: 115px !important;
+    max-width: 115px !important;
+    height: auto !important;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.12)) !important;
+    animation: cinfFloatReverse 7s ease-in-out infinite alternate !important;
+}
+
+@keyframes cinfFloat {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes cinfFloatReverse {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(10px) rotate(-2deg); }
+}
+
+@media (max-width: 991px) {
+    .about-1-shape-1 img {
+        width: 100px !important;
+        max-width: 100px !important;
+    }
+    .about-1-shape-2 {
+        right: 15px !important;
+        top: -30px !important;
+    }
+    .about-1-shape-2 img {
+        width: 90px !important;
+        max-width: 90px !important;
+    }
+}
+
+/* ===================================================
+   Team 1 Equal Height & Image Alignment
+   =================================================== */
+.team-1-block {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    margin-bottom: 30px !important;
+}
+
+.team-1-image {
+    height: 340px !important;
+    max-height: 340px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+}
+
+.team-1-image-wrap {
+    height: 100% !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+}
+
+.team-1-image img {
+    height: 100% !important;
+    max-height: 340px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    object-position: bottom center !important;
+}
+
+.team-1-content {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    min-height: 195px !important;
+}
+
+

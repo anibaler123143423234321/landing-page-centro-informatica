@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="netGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#073299"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6200"/>
+      <stop offset="100%" stop-color="#FF9E00"/>
+    </linearGradient>
+  </defs>
+  <!-- Central Tech Cloud -->
+  <path d="M 23 37 C 20 37 17 34 17 30 C 17 26.5 19.5 23.5 23 23 C 24 17 29.5 13 36 13 C 42 13 47 16.5 48.5 22 C 51.5 22.5 54 25 54 28.5 C 54 32.5 51 35.5 47 36 L 23 36 Z" fill="url(#netGrad)" opacity="0.9"/>
+  <!-- Network Interconnection Nodes -->
+  <line x1="32" y1="36" x2="32" y2="46" stroke="#00B4D8" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="32" y1="46" x2="18" y2="54" stroke="#00B4D8" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="32" y1="46" x2="46" y2="54" stroke="#00B4D8" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Central Node -->
+  <circle cx="32" cy="46" r="4.5" fill="url(#orangeGrad)"/>
+  <!-- Left Node (Cisco Academy) -->
+  <circle cx="18" cy="54" r="5" fill="#073299"/>
+  <circle cx="18" cy="54" r="2.5" fill="#00B4D8"/>
+  <!-- Right Node (Google Cloud) -->
+  <circle cx="46" cy="54" r="5" fill="#073299"/>
+  <circle cx="46" cy="54" r="2.5" fill="#FF6200"/>
+  <!-- Career Growth Ascending Arrow Inside Cloud -->
+  <path d="M 32 30 L 32 20 M 28 24 L 32 20 L 36 24" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+

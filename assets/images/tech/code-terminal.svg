@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <!-- Window Container -->
+  <rect x="6" y="10" width="52" height="44" rx="8" fill="url(#termBg)" stroke="#334155" stroke-width="2"/>
+  <!-- Header Bar -->
+  <path d="M 6 18 L 6 18 C 6 13.6 9.6 10 14 10 L 50 10 C 54.4 10 58 13.6 58 18 L 58 20 L 6 20 Z" fill="#334155"/>
+  <!-- Window Action Buttons -->
+  <circle cx="14" cy="15" r="2.5" fill="#EF4444"/>
+  <circle cx="21" cy="15" r="2.5" fill="#F59E0B"/>
+  <circle cx="28" cy="15" r="2.5" fill="#10B981"/>
+  <!-- Code Prompt & Lines -->
+  <!-- Prompt Symbol > -->
+  <path d="M 14 28 L 20 32 L 14 36" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Cursor / Command line -->
+  <line x1="24" y1="36" x2="34" y2="36" stroke="#F43F5E" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Line 2: Function Code -->
+  <line x1="14" y1="42" x2="30" y2="42" stroke="#A855F7" stroke-width="2" stroke-linecap="round"/>
+  <line x1="33" y1="42" x2="48" y2="42" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <!-- Line 3: Output Code -->
+  <line x1="18" y1="48" x2="38" y2="48" stroke="#64748B" stroke-width="2" stroke-linecap="round"/>
+</svg>
+

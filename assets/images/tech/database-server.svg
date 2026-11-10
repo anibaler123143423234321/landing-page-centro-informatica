@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#073299"/>
+    </linearGradient>
+  </defs>
+  <!-- Top Disk -->
+  <path d="M 12 18 C 12 12 21 8 32 8 C 43 8 52 12 52 18 C 52 24 43 28 32 28 C 21 28 12 24 12 18 Z" fill="url(#dbGrad)"/>
+  <ellipse cx="32" cy="18" rx="20" ry="8" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="44" cy="18" r="2" fill="#10B981"/>
+
+  <!-- Middle Disk -->
+  <path d="M 12 26 C 12 32 21 36 32 36 C 43 36 52 32 52 26 L 52 32 C 52 38 43 42 32 42 C 21 42 12 38 12 32 Z" fill="url(#dbGrad)"/>
+  <circle cx="44" cy="34" r="2" fill="#00E5FF"/>
+
+  <!-- Bottom Disk -->
+  <path d="M 12 40 C 12 46 21 50 32 50 C 43 50 52 46 52 40 L 52 46 C 52 52 43 56 32 56 C 21 56 12 52 12 46 Z" fill="url(#dbGrad)"/>
+  <circle cx="44" cy="48" r="2" fill="#F59E0B"/>
+
+  <!-- Front Data Indicators -->
+  <rect x="20" y="29" width="14" height="2" rx="1" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="20" y="43" width="18" height="2" rx="1" fill="#FFFFFF" opacity="0.8"/>
+</svg>
+

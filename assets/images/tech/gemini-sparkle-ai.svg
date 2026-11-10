@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="geminiGradMain" x1="5%" y1="95%" x2="95%" y2="5%">
+      <stop offset="0%" stop-color="#1A73E8"/>
+      <stop offset="25%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#9C27B0"/>
+      <stop offset="75%" stop-color="#E91E63"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+    <linearGradient id="geminiGradSmall" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#BA68C8"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+    <radialGradient id="geminiAmbient" cx="45%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#8E24AA" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#1A73E8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1A73E8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Ambient Glow -->
+  <circle cx="55" cy="62" r="50" fill="url(#geminiAmbient)"/>
+  <!-- Primary Gemini Sparkle -->
+  <path d="M 52 14 C 52 38 72 58 96 58 C 72 58 52 78 52 102 C 52 78 32 58 8 58 C 32 58 52 38 52 14 Z" fill="url(#geminiGradMain)"/>
+  <!-- Secondary Companion Sparkle (Top-Right) -->
+  <path d="M 94 10 C 94 20 102 28 112 28 C 102 28 94 36 94 46 C 94 36 86 28 76 28 C 86 28 94 20 94 10 Z" fill="url(#geminiGradSmall)"/>
+  <!-- Micro Star Accent -->
+  <circle cx="28" cy="24" r="2.5" fill="#4285F4" opacity="0.8"/>
+  <circle cx="98" cy="88" r="2" fill="#E91E63" opacity="0.8"/>
+</svg>
+

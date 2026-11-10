@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Oficial de SVGs Tecnológicos - CINF USS</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #073299;
+      --secondary: #ff6200;
+      --accent: #00b4d8;
+      --dark: #0a1128;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .header {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #073299 0%, #001f54 100%);
+      color: white;
+      padding: 48px 24px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(7, 50, 153, 0.2);
+    }
+    .header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .header p {
+      font-size: 17px;
+      color: #cbd5e1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 98, 0, 0.2);
+      color: #ff9e00;
+      border: 1px solid rgba(255, 98, 0, 0.4);
+      padding: 4px 14px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      color: var(--dark);
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+    .section-title span {
+      background: var(--primary);
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+    .svg-card {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .svg-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(7, 50, 153, 0.12);
+      border-color: var(--accent);
+    }
+    .svg-preview {
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 1.5px dashed #cbd5e1;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      padding: 14px;
+      transition: border-color 0.2s;
+    }
+    .svg-preview.dark-preview {
+      background: transparent;
+    }
+    .svg-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    }
+    .svg-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .svg-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      min-height: 38px;
+    }
+    .svg-path {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-family: monospace;
+      color: #475569;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 12px;
+    }
+    .copy-btn {
+      width: 100%;
+      padding: 8px 14px;
+      border: 1px solid #cbd5e1;
+      background: white;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .copy-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .copy-btn.copied {
+      background: #10b981;
+      color: white;
+      border-color: #10b981;
+    }
+    .hero-shapes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .hero-shape-card {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+    .hero-shape-card.featured {
+      border-color: #00b4d8;
+      background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+    }
+    .hero-shape-preview {
+      width: 220px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .hero-shape-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      animation: floatDemo 4s ease-in-out infinite alternate;
+    }
+    @keyframes floatDemo {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="badge">Centro de Informática USS</div>
+    <h1>Catálogo Oficial de SVGs Tecnológicos</h1>
+    <p>Colección de vectores oficiales de Google, Google Gemini, Microsoft, Cisco y Shapes flotantes 3D diseñados para reemplazar los elementos de piscina/playa por identidad de alta tecnología.</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Sección 1: Formas Flotantes 100% Transparentes (Sin Fondo) -->
+    <h2 class="section-title"><span>1</span> Formas Flotantes Transparentes (Sin Fondo)</h2>
+    <div class="hero-shapes-grid">
+      <div class="hero-shape-card featured">
+        <span class="badge" style="background:#e0f2fe; color:#0284c7; border-color:#bae6fd;">Reemplazo Sombrilla (shape-2) • Sin Fondo</span>
+        <div class="hero-shape-preview">
+          <img src="assets/images/shape/shape-gemini.svg" alt="Google Gemini AI Star">
+        </div>
+        <h3>Google Gemini AI (100% Transparente)</h3>
+        <p>Estrella astroid oficial de Google Gemini con gradiente multicromático y partículas flotantes. Sin recuadros ni cajas de fondo.</p>
+        <div class="svg-path">assets/images/shape/shape-gemini.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/shape/shape-gemini.svg&quot; alt=&quot;Google Gemini AI&quot; />', this)">Copiar Etiqueta HTML</button>
+      </div>
+
+      <div class="hero-shape-card featured">
+        <span class="badge" style="background:#fef3c7; color:#d97706; border-color:#fde68a;">Reemplazo Reposera (shape-3) • Sin Fondo</span>
+        <div class="hero-shape-preview">
+          <img src="assets/images/shape/shape-microsoft.svg" alt="Microsoft 4 Squares">
+        </div>
+        <h3>Microsoft Oficial (100% Transparente)</h3>
+        <p>Cuatro cuadrados oficiales de Microsoft flotando libremente con sombra suave. Sin recuadros oscuros ni cajas de fondo.</p>
+        <div class="svg-path">assets/images/shape/shape-microsoft.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/shape/shape-microsoft.svg&quot; alt=&quot;Microsoft Oficial&quot; />', this)">Copiar Etiqueta HTML</button>
+      </div>
+    </div>
+
+    <!-- Sección 2: Google & Gemini -->
+    <h2 class="section-title"><span>2</span> Ecosistema Google &amp; Google Gemini</h2>
+    <div class="grid">
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/google-icon.svg" alt="Google Super-G">
+        </div>
+        <h3>Google "G" Oficial</h3>
+        <p>Logo oficial de 4 colores corporativos de Google.</p>
+        <div class="svg-path">assets/images/tech/google-icon.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/google-icon.svg&quot; alt=&quot;Google&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/google-gemini.svg" alt="Google Gemini">
+        </div>
+        <h3>Google Gemini Star</h3>
+        <p>Estrella astroid curvada de 4 puntas con gradiente azul-violeta-coral.</p>
+        <div class="svg-path">assets/images/tech/google-gemini.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/google-gemini.svg&quot; alt=&quot;Google Gemini&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview dark-preview">
+          <img src="assets/images/tech/gemini-sparkle-ai.svg" alt="Gemini Sparkle AI">
+        </div>
+        <h3>Gemini Sparkle AI Pro</h3>
+        <p>Doble destello Gemini con aura de resplandor para temas oscuros y claros.</p>
+        <div class="svg-path">assets/images/tech/gemini-sparkle-ai.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/gemini-sparkle-ai.svg&quot; alt=&quot;Gemini Sparkle AI&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/google-cloud.svg" alt="Google Cloud">
+        </div>
+        <h3>Google Cloud</h3>
+        <p>Nube oficial de Google con sus cuatro colores vectoriales.</p>
+        <div class="svg-path">assets/images/tech/google-cloud.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/google-cloud.svg&quot; alt=&quot;Google Cloud&quot; />', this)">Copiar HTML</button>
+      </div>
+    </div>
+
+    <!-- Sección 3: Microsoft & Cisco -->
+    <h2 class="section-title"><span>3</span> Microsoft &amp; Cisco Networking</h2>
+    <div class="grid">
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/microsoft-logo.svg" alt="Microsoft">
+        </div>
+        <h3>Microsoft Oficial</h3>
+        <p>Cuatro cuadrados vectoriales clásicos de Microsoft.</p>
+        <div class="svg-path">assets/images/tech/microsoft-logo.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/microsoft-logo.svg&quot; alt=&quot;Microsoft&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/microsoft-365.svg" alt="Microsoft 365">
+        </div>
+        <h3>Microsoft 365</h3>
+        <p>Cinta hexagonal moderna para Word 365, Excel 365 y Ofimática.</p>
+        <div class="svg-path">assets/images/tech/microsoft-365.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/microsoft-365.svg&quot; alt=&quot;Microsoft 365&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/microsoft-azure.svg" alt="Microsoft Azure">
+        </div>
+        <h3>Microsoft Azure</h3>
+        <p>Símbolo geométrico de nube y servicios en la nube de Microsoft.</p>
+        <div class="svg-path">assets/images/tech/microsoft-azure.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/microsoft-azure.svg&quot; alt=&quot;Microsoft Azure&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/cisco-logo.svg" alt="Cisco">
+        </div>
+        <h3>Cisco Networking</h3>
+        <p>Las 9 barras icónicas de puente de red Cisco Networking Academy.</p>
+        <div class="svg-path">assets/images/tech/cisco-logo.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/cisco-logo.svg&quot; alt=&quot;Cisco Networking Academy&quot; />', this)">Copiar HTML</button>
+      </div>
+    </div>
+
+    <!-- Sección 4: Iconos Funcionales de Tecnología & Acreditación CINF -->
+    <h2 class="section-title"><span>4</span> Iconos Funcionales para Tarjetas CINF</h2>
+    <div class="grid">
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/ai-chatbot-assistant.svg" alt="Chatbot CINF">
+        </div>
+        <h3>AI Chatbot Assistant 24/7</h3>
+        <p>Reemplaza la escalera de piscina en la tarjeta de Chatbot CINF.</p>
+        <div class="svg-path">assets/images/tech/ai-chatbot-assistant.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/ai-chatbot-assistant.svg&quot; alt=&quot;Chatbot CINF&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/tech-certification-badge.svg" alt="Certificación y Grado">
+        </div>
+        <h3>Grado SUNEDU &amp; MOS</h3>
+        <p>Reemplaza el nadador en la tarjeta de Acreditación de Grado.</p>
+        <div class="svg-path">assets/images/tech/tech-certification-badge.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/tech-certification-badge.svg&quot; alt=&quot;Acreditación de Grado&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/cloud-network.svg" alt="Red & GEX">
+        </div>
+        <h3>Cisco &amp; Google Cloud GEX</h3>
+        <p>Reemplaza el salvavidas en la tarjeta del Programa GEX.</p>
+        <div class="svg-path">assets/images/tech/cloud-network.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/cloud-network.svg&quot; alt=&quot;Cisco &amp; Google GEX&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/ai-chip-processor.svg" alt="AI Processor">
+        </div>
+        <h3>Microchip Procesador AI</h3>
+        <p>Procesador neuronal con contactos dorados y núcleo cuántico.</p>
+        <div class="svg-path">assets/images/tech/ai-chip-processor.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/ai-chip-processor.svg&quot; alt=&quot;AI Chip&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/cyber-shield.svg" alt="Cyber Shield">
+        </div>
+        <h3>Ciberseguridad &amp; SUNEDU</h3>
+        <p>Escudo digital con candado de acreditación tecnológica oficial.</p>
+        <div class="svg-path">assets/images/tech/cyber-shield.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/cyber-shield.svg&quot; alt=&quot;Ciberseguridad&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/code-terminal.svg" alt="Code Terminal">
+        </div>
+        <h3>Terminal de Programación</h3>
+        <p>Consola de comandos e IDE para cursos de desarrollo y software.</p>
+        <div class="svg-path">assets/images/tech/code-terminal.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/code-terminal.svg&quot; alt=&quot;Terminal&quot; />', this)">Copiar HTML</button>
+      </div>
+
+      <div class="svg-card">
+        <div class="svg-preview">
+          <img src="assets/images/tech/database-server.svg" alt="Database">
+        </div>
+        <h3>Servidor de Datos &amp; Cloud</h3>
+        <p>Almacenamiento de bases de datos relacionales y cloud computing.</p>
+        <div class="svg-path">assets/images/tech/database-server.svg</div>
+        <button class="copy-btn" onclick="copySnippet('<img src=&quot;assets/images/tech/database-server.svg&quot; alt=&quot;Database&quot; />', this)">Copiar HTML</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function copySnippet(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.innerText;
+        btn.innerText = "¡Copiado!";
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.innerText = originalText;
+          btn.classList.remove('copied');
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Google Gemini Gradient -->
+    <linearGradient id="geminiGradNoBg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1B6EF3"/>
+      <stop offset="25%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#9B51E0"/>
+      <stop offset="75%" stop-color="#E91E63"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+
+    <!-- Companion Star Gradient -->
+    <linearGradient id="geminiGradSmallNoBg" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#FF8A65"/>
+    </linearGradient>
+
+    <!-- Subtle Glow for the stars -->
+    <filter id="starGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- NO BACKGROUND CONTAINER - 100% TRANSPARENT -->
+
+  <!-- Primary Gemini Astroid Sparkle -->
+  <path d="M 90 20 C 90 68 122 100 170 100 C 122 100 90 132 90 180 C 90 132 58 100 10 100 C 58 100 90 68 90 20 Z" fill="url(#geminiGradNoBg)" filter="url(#starGlow)"/>
+
+  <!-- Secondary Companion Sparkle (Top-Right) -->
+  <path d="M 155 15 C 155 30 168 43 183 43 C 168 43 155 56 155 71 C 155 56 142 43 127 43 C 142 43 155 30 155 15 Z" fill="url(#geminiGradSmallNoBg)"/>
+
+  <!-- Micro Orbit Sparkles -->
+  <circle cx="32" cy="45" r="3.5" fill="#4285F4" opacity="0.85"/>
+  <circle cx="165" cy="150" r="3" fill="#E91E63" opacity="0.85"/>
+  <circle cx="48" cy="160" r="2.5" fill="#9B51E0" opacity="0.8"/>
+</svg>
