@@ -449,18 +449,20 @@
 }
 
 .team-1-image {
-    height: 340px !important;
-    max-height: 340px !important;
+    height: 320px !important;
+    max-height: 320px !important;
     display: flex !important;
     align-items: flex-end !important;
     justify-content: center !important;
     overflow: hidden !important;
     margin: 0 auto !important;
     background: transparent !important;
+    position: relative !important;
 }
 
 .team-1-image-wrap {
     height: 100% !important;
+    width: 100% !important;
     display: flex !important;
     align-items: flex-end !important;
     justify-content: center !important;
@@ -468,11 +470,17 @@
 
 .team-1-image img {
     height: 100% !important;
-    max-height: 340px !important;
+    max-height: 320px !important;
     width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
     object-position: bottom center !important;
+}
+
+/* Dagner Chuman image size constraint so head doesn't reach the top */
+.team-1-image img[src*="team-1"] {
+    max-height: 275px !important;
+    height: auto !important;
 }
 
 .team-1-content {
