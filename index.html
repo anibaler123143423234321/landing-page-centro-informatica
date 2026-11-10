@@ -409,14 +409,23 @@
     }
 
     .mobile-nav-toggler {
-        margin-left: 4px !important;
-        display: flex !important;
-        align-items: center !important;
+        display: none !important;
     }
 
-    .mobile-nav-toggler img {
-        width: 32px !important;
-        height: 32px !important;
+    @media (max-width: 991px) {
+        .mobile-nav-toggler {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            margin-left: 6px !important;
+            order: 3 !important;
+        }
+
+        .mobile-nav-toggler img {
+            width: 32px !important;
+            height: 32px !important;
+        }
     }
 }
         </style>
@@ -438,9 +447,6 @@
                                 </div>
                                 <div class="header-divider d-none d-xl-block"></div>
                                 <div class="nav-outer">
-                                    <div class="mobile-nav-toggler">
-                                        <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
-                                    </div>
                                     <nav class="main-menu navbar-expand-md navbar-light">
                                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                             <ul class="navigation clearfix">
@@ -505,6 +511,9 @@
                                         </span>
                                     </a>
                                     <a href="/gex" class="header-portal-btn" title="Ingresar al Portal GEX">Portal GEX</a>
+                                    <div class="mobile-nav-toggler" title="Abrir menú de navegación">
+                                        <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
+                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -522,9 +531,6 @@
                                 </div>
                                 <div class="header-divider d-none d-xl-block"></div>
                                 <div class="nav-outer">
-                                    <div class="mobile-nav-toggler">
-                                        <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
-                                    </div>
                                     <nav class="main-menu navbar-expand-md navbar-light">
                                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContentSticky">
                                             <ul class="navigation clearfix">
@@ -589,6 +595,9 @@
                                         </span>
                                     </a>
                                     <a href="/gex" class="header-portal-btn" title="Ingresar al Portal GEX">Portal GEX</a>
+                                    <div class="mobile-nav-toggler" title="Abrir menú de navegación">
+                                        <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
+                                    </div>
                                 </div>
                         </div>
                     </div>
