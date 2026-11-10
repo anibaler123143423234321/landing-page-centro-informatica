@@ -1,0 +1,294 @@
+/* ===================================================
+   CINF USS - Header Compact & Sleek Modern Styling
+   =================================================== */
+
+/* Container & Header Bounds */
+.main-header {
+    background: #ffffff !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.main-header .auto-container,
+.sticky-header .auto-container {
+    max-width: 1480px !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+}
+
+.main-header .header-upper .inner-container,
+.sticky-header .inner-container {
+    min-height: 68px !important;
+    height: 68px !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Logo Sizing */
+.header-upper .logo-box .logo,
+.sticky-header .logo-box .logo {
+    padding: 8px 0 !important;
+}
+
+.header-upper .logo-box .logo img,
+.sticky-header .logo-box .logo img {
+    max-height: 42px !important;
+    height: 42px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Divider between Logo and Nav */
+.header-divider {
+    width: 1px;
+    height: 32px;
+    background: #e2e8f0;
+    margin: 0 22px;
+    display: inline-block;
+}
+
+/* Navigation items in a single, crisp row */
+.nav-outer {
+    flex-wrap: nowrap !important;
+}
+
+.main-menu .navigation {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+}
+
+.main-menu .navigation > li {
+    position: relative !important;
+    padding: 18px 0 !important;
+    margin-right: 22px !important;
+    white-space: nowrap !important;
+}
+
+.main-menu .navigation > li:last-child {
+    margin-right: 0 !important;
+}
+
+.main-menu .navigation > li > a {
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    color: #1e293b !important;
+    padding: 2px 0 !important;
+    line-height: 24px !important;
+    transition: color 0.2s ease !important;
+}
+
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a {
+    color: #073299 !important;
+    font-weight: 600 !important;
+}
+
+.main-menu .navigation > li:before {
+    bottom: 12px !important;
+    height: 2px !important;
+    background: #073299 !important;
+}
+
+/* Dropdown Arrow - Clean & Crisp CSS Chevron (replaces broken font icon) */
+.main-menu .navigation > li.dropdown > a {
+    padding-right: 0 !important;
+}
+
+.main-menu .navigation > li.dropdown > a:before {
+    display: none !important;
+    content: none !important;
+}
+
+.main-menu .navigation > li.dropdown > a:after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 5px !important;
+    height: 5px !important;
+    border-right: 1.5px solid currentColor !important;
+    border-bottom: 1.5px solid currentColor !important;
+    transform: rotate(45deg) !important;
+    margin-left: 6px !important;
+    margin-bottom: 3px !important;
+    vertical-align: middle !important;
+    position: static !important;
+    transition: transform 0.2s ease !important;
+}
+
+.main-menu .navigation > li.dropdown:hover > a:after {
+    transform: rotate(-135deg) !important;
+    margin-bottom: -1px !important;
+}
+
+/* Dropdown Menu - Clean White Background & High Contrast */
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > ul > li > ul {
+    position: absolute !important;
+    top: 100% !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0 !important;
+    border-top: 3px solid #073299 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12) !important;
+    padding: 6px 0 !important;
+    min-width: 260px !important;
+    overflow: hidden !important;
+    z-index: 9999 !important;
+}
+
+.main-menu .navigation > li > ul > li,
+.main-menu .navigation > li > ul > li > ul > li {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    width: 100% !important;
+}
+
+.main-menu .navigation > li > ul > li:before,
+.main-menu .navigation > li > ul > li > ul > li:before {
+    display: none !important;
+}
+
+.main-menu .navigation > li > ul > li > a,
+.main-menu .navigation > li > ul > li > ul > li > a {
+    position: relative !important;
+    display: block !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #1e293b !important;
+    line-height: 22px !important;
+    text-align: left !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    background: transparent !important;
+    transition: all 0.25s ease !important;
+}
+
+.main-menu .navigation > li > ul > li:last-child > a,
+.main-menu .navigation > li > ul > li > ul > li:last-child > a {
+    border-bottom: none !important;
+}
+
+/* Hover State - High Visibility & USS Blue Accent */
+.main-menu .navigation > li > ul > li > a:hover,
+.main-menu .navigation > li > ul > li > ul > li > a:hover {
+    background-color: #f0f7ff !important;
+    color: #073299 !important;
+    font-weight: 600 !important;
+    padding-left: 24px !important;
+}
+
+/* Sub-dropdown chevron */
+.main-menu .navigation > li > ul > li.dropdown > a:after {
+    border-color: #64748b !important;
+    position: absolute !important;
+    right: 18px !important;
+    top: 50% !important;
+    margin-top: -3px !important;
+}
+.main-menu .navigation > li > ul > li.dropdown:hover > a:after {
+    border-color: #073299 !important;
+}
+
+/* Right Column Adjustments */
+.right-column {
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+.theme-btn.search-toggler {
+    background: transparent !important;
+    border: none !important;
+    font-size: 18px !important;
+    color: #475569 !important;
+    cursor: pointer !important;
+    padding: 6px !important;
+    margin-right: 20px !important;
+    transition: color 0.2s ease !important;
+}
+
+.theme-btn.search-toggler:hover {
+    color: #073299 !important;
+}
+
+.contact-info-1 {
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 0 !important;
+}
+
+.contact-info-1-icon {
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+    font-size: 15px !important;
+    border-radius: 50% !important;
+    background: #f0f7ff !important;
+    color: #073299 !important;
+    text-align: center !important;
+    margin-right: 10px !important;
+    box-shadow: 0 2px 8px rgba(7, 50, 153, 0.1) !important;
+}
+
+.contact-info-1-phone-tel {
+    font-size: 10.5px !important;
+    font-family: inherit !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 2px !important;
+    line-height: 1.1 !important;
+    font-weight: 600 !important;
+}
+
+.contact-info-1-phone-number {
+    font-size: 14.5px !important;
+    margin-bottom: 0 !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+}
+
+.contact-info-1-phone-number a {
+    color: #073299 !important;
+    text-decoration: none !important;
+}
+
+/* Remove Chatbot Button on the right */
+.header-link-btn {
+    display: none !important;
+}
+
+/* Sticky Header Adjustments */
+.fixed-header .sticky-header {
+    background: #ffffff !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.sticky-header .main-menu .navigation > li {
+    padding: 16px 0 !important;
+    margin-right: 22px !important;
+}
+
+.sticky-header .header-upper .logo-box .logo,
+.sticky-header .logo-box .logo {
+    padding: 8px 0 !important;
+}
+
+/* Responsive adjustment for laptops between 992px and 1240px */
+@media (max-width: 1240px) and (min-width: 992px) {
+    .main-menu .navigation > li {
+        margin-right: 14px !important;
+    }
+    .main-menu .navigation > li > a {
+        font-size: 13.5px !important;
+    }
+    .header-divider {
+        margin: 0 14px !important;
+    }
+    .contact-info-1-phone-number {
+        font-size: 13.5px !important;
+    }
+}
