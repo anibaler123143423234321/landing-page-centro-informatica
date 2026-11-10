@@ -10,34 +10,21 @@ Copia completa, desacoplada y 100% estática (HTML, CSS, JavaScript Vanilla e Im
 
 ```
 landing-page-centro-informatica/
-├── index.html              # Página de Inicio Principal (Home 1)
-├── index-2.html            # Inicio Alternativo 2
-├── index-3.html            # Inicio Alternativo 3
-├── index-4.html            # Inicio Alternativo 4
-├── about-us.html           # Quiénes Somos / Historia / Misión
-├── service.html            # Catálogo Completo de Servicios
-├── service-details.html    # Ficha Técnica de Servicio
-├── pricing-table.html      # Planes de Mantenimiento y Tarifas
-├── pricing-table-2.html    # Variante de Tabla de Tarifas
-├── gallery.html            # Galería de Proyectos y Obras 1
-├── gallery1.html           # Galería de Proyectos y Obras 2
-├── team.html               # Equipo de Técnicos y Especialistas
-├── team-details.html       # Perfil Individual de Especialista
-├── testmonial.html         # Testimonios y Reseñas de Clientes
+├── index.html              # Portada Principal Oficial (CINF · PROTECH XP)
+├── about-us.html           # Sobre el CINF / Misión, Visión y Pilares
+├── service.html            # Catálogo de Acreditación y Cursos Especializados
+├── service-details.html    # Ruta PROTECH XP (Word & Excel)
+├── pricing-table.html      # Tarifas y Modalidades (Chiclayo y Filiales)
+├── team.html               # Plana Docente / Equipo CINF USS
+├── testmonial.html         # Testimonios de Estudiantes
 ├── faq.html                # Preguntas Frecuentes
-├── shop.html               # Catálogo de Productos y Químicos
-├── shop-details.html       # Ficha de Producto
-├── cart.html               # Carrito de Compras
-├── checkout.html           # Pasarela y Pago
-├── blog.html               # Blog / Artículos Técnicos
-├── blog-2.html             # Blog en Cuadrícula
-├── blog-details.html       # Artículo Individual de Blog
-├── contact.html            # Formulario de Contacto y Ubicación
+├── blog.html               # Noticias, Convocatorias y Talleres CINF USS
+├── contact.html            # Sedes (Chiclayo y Campus Universitario), Horarios y Contacto
 └── assets/                 # Recursos multimedia y hojas de estilo locales
-    ├── css/                # Hojas de estilo Poolix
-    ├── images/             # 162 imágenes originales (logos, banners, galería, equipo)
-    ├── media/              # 59 fuentes web (FontAwesome, IcoMoon, WOFF2)
-    └── js/                 # Scripts auxiliares y main.js (menú móvil, preloader)
+    ├── css/                # custom-cinf.css y hojas de estilo optimizadas
+    ├── images/             # Logotipos USS, fotografías de plana docente y SVGs tecnológicos
+    ├── media/              # Fuentes web institucionales
+    └── js/                 # main.js y scripts auxiliares
 ```
 
 ---
