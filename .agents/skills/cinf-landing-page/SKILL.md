@@ -28,19 +28,28 @@ Construir y perfeccionar el portal web estático y vitrina informativa oficial p
 ## 🏛️ 2. Arquitectura Técnica y Restricciones de Desarrollo
 
 * **Stack Obligatorio**: **HTML5 estático semántico, CSS modular y Vanilla JavaScript puro**.
-* **Prohibición Estricta de Frameworks**: No utilizar React, Next.js, Vite ni dependencias con hidratación de cliente en este directorio. Se eliminaron todos los chunks y scripts residuales (`self.__next_f.push`).
+* **Prohibición Estricta de Frameworks**: No utilizar React, Next.js, Vite ni dependencias con hidratación de cliente en este directorio.
+* **Separación de capas**: el HTML no lleva bloques `<style>`, atributos `style=""` ni `<script>` en línea. Los estilos van en `assets/css/` y el comportamiento en `assets/js/`.
 * **Estructura de Archivos**:
-  - `index.html`: Portada principal (visualización activa en Live Server: `http://127.0.0.1:5500/landing-page-centro-informatica/index.html`).
-  - `about-us.html`: Quiénes somos, misión, visión y convenios.
-  - `service.html` & `service-details.html`: Catálogo de cursos y detalle de rutas de acreditación.
-  - `team.html` & `team-details.html`: Plana docente e instructores certificados.
-  - `pricing-table.html`: Tarifario oficial, modalidades de pago y cuentas bancarias.
+  - `index.html`: Portada principal (portal de 2 tarjetas: Chatbot y GEX).
+  - `about-us.html`: Quiénes somos, historia, misión, visión, pilares y alianzas.
+  - `service.html` & `service-details.html`: Catálogo de cursos con filtros y ficha de la Ruta PROTECH XP.
+  - `pricing-table.html`: Tarifario oficial, modalidades de pago y canales autorizados.
+  - `team.html`: Jefatura, coordinación y especialistas.
+  - `testmonial.html`: Experiencias de estudiantes por carrera.
   - `faq.html`: Preguntas frecuentes de acreditación y trámites.
-  - `contact.html`: Sedes (Pimentel y Aguirre 933), mesa de partes y formulario.
-* **Hojas de Estilos y Tokens**:
-  - [`assets/css/custom-cinf.css`](assets/css/custom-cinf.css): Tokens USS (`#073299` Azul USS, `#00b4d8` Cian, `#1e293b` Pizarra), header compacto y desplegables.
+  - `blog.html`: Noticias y convocatorias.
+  - `contact.html`: Sedes, horarios y canales de atención.
+* **Hojas de Estilos**:
+  - Base de la plantilla (no editar): `bootstrap.min.css`, `theme-base.min.css`, `fontawesome.all.min.css`, `animate.min.css`, `swiper.min.css`, `jquery-ui.min.css`, `modal-video.min.css` y `swiper-icons.css`. Esta última contiene además las tipografías del sitio (Inter, Oswald, Poppins y Playfair Display): no eliminarla.
+  - [`assets/css/header-cinf.css`](assets/css/header-cinf.css): header compacto, desplegables y menú móvil. Lo cargan las 10 páginas.
+  - [`assets/css/custom-cinf.css`](assets/css/custom-cinf.css): portada (`index.html`).
+  - [`assets/css/pages-cinf.css`](assets/css/pages-cinf.css): componentes `cinf-*` de las 9 páginas interiores, con tokens USS (`#073299` azul, `#00b4d8` cian, `#ff5e14` naranja).
 * **JavaScript Ligero**:
-  - [`assets/js/main.js`](assets/js/main.js): Carrusel rotativo hero, drawer móvil y modal de búsqueda.
+  - [`assets/js/main.js`](assets/js/main.js): header fijo, menú móvil, buscador y elemento activo del menú.
+  - [`assets/js/pages-cinf.js`](assets/js/pages-cinf.js): filtros y búsqueda del catálogo, copiado del código de pago y apertura de preguntas enlazadas.
+* **Header y pie de página**: son idénticos en las 10 páginas. Si cambian, se editan en `index.html` y se replican en las demás.
+* **Versión de caché**: al modificar una hoja `*-cinf.css`, sube su `?v=` en las páginas que la cargan.
 
 ---
 
@@ -59,27 +68,25 @@ Construir y perfeccionar el portal web estático y vitrina informativa oficial p
 
 ---
 
-## 🖼️ 4. Inventario de Imágenes y Roadmap de Sustitución
+## 🖼️ 4. Inventario de Imágenes
 
-### ✅ Fase 1: Hero Carousel (Completado con Nano Banana / Imagen 3)
-* `assets/images/main-slider/banner-1.jpg`: Modern tech hub nocturno con interfaces holográficas de IA / chatbot y estudiantes universitarios.
-* `assets/images/main-slider/banner-2.jpg`: Plana docente e instructores de tecnología en laboratorio universitario moderno.
-* `assets/images/main-slider/banner-3.jpg`: Centro de acreditación digital con estudiantes en analítica de datos y multipantallas.
+Las imágenes de la plantilla original ya se eliminaron. Todas las que quedan son académicas o tecnológicas.
 
-### ⏳ Fase 2: Imágenes Pendientes de Sustitución (Poolix Placeholders $\rightarrow$ Activos USS CINF)
-El sitio aún conserva imágenes del template de mantenimiento de piscinas que deben sustituirse progresivamente por fotografías académicas y tecnológicas:
+| Carpeta | Contenido |
+|---|---|
+| `assets/images/cinf/` | SVG propios: íconos de cursos (`curso-*.svg`), ilustraciones de cabecera (`ilustracion-*.svg`), patrón de circuito y motivo del pie de página. |
+| `assets/images/tech/` | Logotipos e íconos tecnológicos (Microsoft, Cisco, chatbot, nube). |
+| `assets/images/main-slider/` | `banner-1..3.jpg`: fondos de cabecera de Noticias, Equipo y Catálogo. |
+| `assets/images/resource/` | Fotos de contenido (`service-1..4`, `feature-image-1..3`, `image-1..2`, `blog-1..2`), `about.jpg` y retratos del equipo (`team-1..4.jpg`). |
+| `assets/images/gallery/` | `gallery-1..4.jpg`: entornos de aprendizaje de Nosotros. |
 
-| Archivo Placeholder | Sección en Landing | Concepto / Reemplazo Requerido |
-|---|---|---|
-| `assets/images/resource/feature-image-1.jpg` | Bloque 1: Chatbot CINF 24/7 | Captura o render 3D de asistente virtual / soporte digital universitario. |
-| `assets/images/resource/feature-image-2.jpg` | Bloque 2: Acreditación Computación | Estudiante con laptop en campus o laboratorio universitario. |
-| `assets/images/resource/feature-image-3.jpg` | Bloque 3: Certificación MOS | Credencial Microsoft Office Specialist / examen Certiport. |
-| `assets/images/resource/about.jpg` | Sección Quiénes Somos | Fachada oficial del Campus USS Pimentel o moderna sala de cómputo. |
-| `assets/images/resource/service-1.jpg` a `service-4.jpg` | Tarjetas de Cursos | Interfaces de software (Word 365, Excel 365, Power BI, AutoCAD). |
-| `assets/images/resource/team-1.jpg` a `team-4.jpg` | Plana Docente CINF | Fotos formales de los docentes (Ing. Dagner Chuman, Mg. Carlos Silva, etc.). |
-| `assets/images/gallery/gallery-1.jpg` a `gallery-4.jpg` | Galería de Infraestructura | Instalaciones reales de laboratorios y aulas de cómputo USS. |
-| `assets/images/resource/blog-1.jpg` y `blog-2.jpg` | Comunicados Académicos | Eventos de tecnología, talleres de acreditación y aperturas de ciclo. |
-| `assets/images/resource/image-1.jpg` y `image-2.jpg` | Banners CTA | Fondos abstractos tecnológicos en azul institucional USS. |
+Para regenerar o mejorar una imagen, usa los prompts de [`docs/prompts-imagenes-nano-banana.md`](docs/prompts-imagenes-nano-banana.md) y guarda el resultado con el mismo nombre de archivo: no hay que tocar el HTML.
+
+Pendientes de imagen:
+
+* Reemplazar `gallery-1..4.jpg` por fotografías reales de los laboratorios.
+* Regenerar `feature-image-3.jpg` (el certificado muestra un nombre inventado).
+* Unificar el fondo y el encuadre de `team-1..4.jpg`.
 
 ---
 
@@ -109,15 +116,12 @@ El sitio aún conserva imágenes del template de mantenimiento de piscinas que d
 ## 📋 7. Checklist de Tareas del Proyecto
 
 - [x] Estructura estática limpia HTML5/CSS/JS (cero React, cero Next.js).
-- [x] Header traducido 100% al español.
-- [x] Header compactado a 68px en una sola fila (`flex-wrap: nowrap`).
-- [x] Desplegables con fondo blanco puro y chevron CSS nítido.
-- [x] Botón derecho redundante de Chatbot eliminado del header.
-- [x] Generación de 3 fondos hero con Nano Banana (AI, Docentes, Acreditación).
-- [ ] Sustituir imágenes de `feature-image-1..3` (Servicios destacados).
-- [ ] Sustituir imagen de `about.jpg` por campus universitario USS.
-- [ ] Sustituir imágenes de cursos `service-1..4` (Word, Excel, Power BI, AutoCAD).
-- [ ] Actualizar fotos de la plana docente en `team-1..4` con fotos reales del equipo CINF.
-- [ ] Actualizar fotos de la galería de infraestructura `gallery-1..4`.
-- [ ] Conectar formularios de contacto con API/endpoint de tickets CINF.
-
+- [x] Header compacto de una sola fila, igual en las 10 páginas.
+- [x] Hojas de estilo con nombres semánticos (sin hashes de compilación).
+- [x] Contenido oficial del CINF en las 9 páginas interiores.
+- [x] Eliminadas las imágenes y referencias de la plantilla original.
+- [x] Estilos y scripts fuera del HTML.
+- [ ] Reemplazar la galería por fotografías reales de los laboratorios.
+- [ ] Reemplazar los textos referenciales de `testmonial.html` por testimonios autorizados.
+- [ ] Validar con Jefatura la misión, la visión y los canales de pago publicados.
+- [ ] Corregir el enlace de YouTube del pie de página (hoy responde 404).

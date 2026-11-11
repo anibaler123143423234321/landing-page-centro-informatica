@@ -404,8 +404,34 @@ html body.fixed-header .boxed_wrapper .sticky-header {
 html body .boxed_wrapper .mobile-menu .close-btn {
     font-size: 20px !important;
     font-weight: 700 !important;
-    color: #002B49 !important;
+    color: #ffffff !important;
     cursor: pointer !important;
+}
+
+/* Bloque de contacto del drawer: texto claro sobre su fondo oscuro (#202020) */
+html body .boxed_wrapper .mobile-menu .contact-info {
+    padding: 24px 25px 4px !important;
+}
+
+html body .boxed_wrapper .mobile-menu .contact-info h4 {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    margin-bottom: 12px !important;
+}
+
+html body .boxed_wrapper .mobile-menu .contact-info li,
+html body .boxed_wrapper .mobile-menu .contact-info li a {
+    color: #cbd5e1 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+html body .boxed_wrapper .mobile-menu .contact-info li {
+    margin-bottom: 10px !important;
+}
+
+html body .boxed_wrapper .mobile-menu .contact-info .contact-info-icon {
+    color: #00b4d8 !important;
 }
 
 html body .boxed_wrapper .mobile-menu .dropdown-btn {

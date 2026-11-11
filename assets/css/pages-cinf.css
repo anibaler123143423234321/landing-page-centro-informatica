@@ -11,6 +11,7 @@
     --cinf-navy: #002b49;
     --cinf-cyan: #00b4d8;
     --cinf-orange: #ff5e14;
+    --cinf-orange-text: #c2410c;
     --cinf-ink: #1e293b;
     --cinf-text: #475569;
     --cinf-muted: #64748b;
@@ -18,7 +19,7 @@
     --cinf-soft: #f8fafc;
     --cinf-tint: #eef4ff;
     --cinf-green: #15803d;
-    --cinf-wa: #128c4a;
+    --cinf-wa: #0f7a40;
     --cinf-radius: 16px;
     --cinf-shadow: 0 10px 28px rgba(0, 43, 73, 0.06);
     --cinf-shadow-hover: 0 16px 36px rgba(0, 43, 73, 0.12);
@@ -44,18 +45,51 @@
     line-height: 1.65;
 }
 
-.cinf-page p {
+/* Base con especificidad mínima (:where): cualquier clase de componente la
+   sobrescribe sin !important. También neutraliza los márgenes que Bootstrap
+   da por defecto a párrafos, listas numeradas, figuras y citas. */
+:where(.cinf-page) p {
+    margin: 0;
     color: var(--cinf-text);
     line-height: 1.65;
 }
 
-.cinf-page strong {
+:where(.cinf-page) ol,
+:where(.cinf-page) dl,
+:where(.cinf-page) dd,
+:where(.cinf-page) figure,
+:where(.cinf-page) blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+:where(.cinf-page) strong {
     color: var(--cinf-ink);
     font-weight: 700;
 }
 
+.cinf-hero strong,
+.cinf-section--navy strong,
+.cinf-cta strong {
+    color: #fff;
+}
+
 .cinf-page a {
     color: var(--cinf-blue);
+}
+
+/* El header queda fijo al hacer scroll: las anclas no deben quedar tapadas */
+.cinf-page [id] {
+    scroll-margin-top: 96px;
+}
+
+.cinf-prose a,
+.cinf-faq__answer a,
+.cinf-steps a,
+.cinf-table a,
+.cinf-note a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .cinf-visually-hidden {
@@ -242,7 +276,7 @@
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--cinf-orange);
+    color: var(--cinf-orange-text);
     margin-bottom: 10px;
 }
 
@@ -389,7 +423,7 @@
 }
 
 .cinf-page .cinf-btn--wa:hover {
-    background: #0d6f3a;
+    background: #0b6233;
     color: #fff;
 }
 
@@ -746,6 +780,18 @@
     box-shadow: var(--cinf-shadow);
 }
 
+.cinf-gallery--captioned .cinf-figure {
+    aspect-ratio: 4 / 3;
+}
+
+.cinf-gallery--captioned figcaption {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
 /* ===================================================
    9. Catálogo de cursos
    =================================================== */
@@ -857,7 +903,7 @@
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--cinf-orange);
+    color: var(--cinf-orange-text);
     margin-bottom: 4px;
 }
 
@@ -1153,12 +1199,6 @@
     padding: 20px;
 }
 
-.cinf-bank__logo {
-    width: 54px;
-    height: 54px;
-    border-radius: 12px;
-    flex-shrink: 0;
-}
 
 .cinf-bank h3 {
     font-family: var(--cinf-heading);
@@ -1327,7 +1367,7 @@
     z-index: 1;
     padding: 5px 12px;
     border-radius: 999px;
-    background: var(--cinf-orange);
+    background: var(--cinf-orange-text);
     color: #fff;
     font-size: 12px;
     font-weight: 700;
@@ -1471,7 +1511,7 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--cinf-orange);
+    color: var(--cinf-orange-text);
     margin: 30px 0 4px;
 }
 
@@ -1512,7 +1552,7 @@
     color: var(--cinf-ink);
 }
 
-.cinf-quote footer {
+.cinf-quote figcaption {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -1607,7 +1647,6 @@
 
 .cinf-article {
     padding: 32px;
-    scroll-margin-top: 96px;
 }
 
 .cinf-article + .cinf-article {
@@ -1691,6 +1730,7 @@
 }
 
 .cinf-map {
+    align-self: stretch;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--cinf-line);
@@ -1703,7 +1743,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 380px;
+    min-height: 420px;
     border: 0;
 }
 
