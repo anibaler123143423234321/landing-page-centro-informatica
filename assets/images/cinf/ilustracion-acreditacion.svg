@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300">
+  <defs>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="cian" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fe3f7"/><stop offset="1" stop-color="#00b4d8"/></linearGradient>
+  </defs>
+  
+  <rect x="14" y="20" width="332" height="108" rx="22" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+  <path d="M89 74h18M161 74h18" stroke="#fff" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round" opacity=".8"/>
+  <g transform="translate(62 74)"><circle r="27" fill="#fff" fill-opacity=".14" stroke="url(#cian)" stroke-width="2"/><path d="M0-9l17 7-17 7-17-7z" fill="#fff"/><path d="M-10 1v7c0 3 4.5 5 10 5s10-2 10-5V1" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M17-2v10" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/></g><g transform="translate(134 74)"><circle r="27" fill="#fff" fill-opacity=".14" stroke="url(#cian)" stroke-width="2"/><path d="M0-9l17 7-17 7-17-7z" fill="#fff"/><path d="M-10 1v7c0 3 4.5 5 10 5s10-2 10-5V1" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M17-2v10" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/></g><g transform="translate(206 74)"><circle r="27" fill="#fff" fill-opacity=".14" stroke="url(#cian)" stroke-width="2"/><path d="M0-9l17 7-17 7-17-7z" fill="#fff"/><path d="M-10 1v7c0 3 4.5 5 10 5s10-2 10-5V1" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><path d="M17-2v10" stroke="#fbbf24" stroke-width="2.5" stroke-linecap="round"/></g>
+  <path d="M250 74h16M258 66v16" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+  <g transform="translate(304 74)">
+    <path d="M-9 14l-8 26 12-5 5 8V16zM9 14l8 26-12-5-5 8V16z" fill="#ff5e14"/>
+    <circle r="25" fill="url(#oro)"/><circle r="18" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
+    <path d="M0.0 -11.0L2.6 -3.6L10.5 -3.4L4.3 1.4L6.5 8.9L0.0 4.5L-6.5 8.9L-4.3 1.4L-10.5 -3.4L-2.6 -3.6z" fill="#fff"/>
+  </g>
+  <path d="M180 132v22" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 7"/>
+  <path d="M172 150l8 9 8-9" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="62" y="168" width="236" height="118" rx="16" fill="#fff"/>
+  <rect x="72" y="178" width="216" height="98" rx="10" fill="none" stroke="#073299" stroke-opacity=".25" stroke-width="1.5"/>
+  <rect x="92" y="196" width="104" height="10" rx="5" fill="#073299"/>
+  <rect x="92" y="216" width="140" height="7" rx="3.5" fill="#cbd5e1"/>
+  <rect x="92" y="231" width="116" height="7" rx="3.5" fill="#cbd5e1"/>
+  <rect x="92" y="252" width="62" height="6" rx="3" fill="#00b4d8"/>
+  <g transform="translate(252 236)">
+    <path d="M-7 12l-6 20 9-4 4 6V14zM7 12l6 20-9-4-4 6V14z" fill="#ff5e14"/>
+    <circle r="19" fill="url(#oro)"/><path d="M-8 0l5.5 5.500L8-6" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

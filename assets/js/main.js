@@ -130,14 +130,22 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================
      6. MARCAR ITEM ACTIVO SEGÚN RUTA ACTUAL
      ========================================== */
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  const navItems = document.querySelectorAll('.navigation > li');
+  // En producción las rutas llegan sin extensión (/contact); en local, con ella (contact.html)
+  const pageName = (path) => (path || '').split(/[?#]/)[0].split('/').pop().replace(/\.html$/, '') || 'index';
+  const currentPage = pageName(window.location.pathname);
 
-  navItems.forEach((li) => {
-    const mainLink = li.querySelector(':scope > a');
-    if (mainLink && mainLink.getAttribute('href') === currentPath) {
+  document.querySelectorAll('.navigation').forEach((menu) => {
+    const navItems = Array.from(menu.querySelectorAll(':scope > li'));
+    const linksTo = (link) => pageName(link.getAttribute('href')) === currentPage;
+
+    // Primero el enlace principal; si la página solo figura en un submenú, se marca su grupo
+    const activeItem =
+      navItems.filter((li) => linksTo(li.querySelector(':scope > a'))).pop() ||
+      navItems.find((li) => Array.from(li.querySelectorAll('ul a')).some(linksTo));
+
+    if (activeItem) {
       navItems.forEach((item) => item.classList.remove('current'));
-      li.classList.add('current');
+      activeItem.classList.add('current');
     }
   });
 });

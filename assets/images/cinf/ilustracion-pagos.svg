@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300">
+  <defs>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="cian" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fe3f7"/><stop offset="1" stop-color="#00b4d8"/></linearGradient>
+  </defs>
+  
+  <g transform="rotate(-8 180 120)">
+    <rect x="40" y="48" width="230" height="142" rx="18" fill="#fff"/>
+    <rect x="40" y="76" width="230" height="26" fill="#073299"/>
+    <rect x="60" y="122" width="54" height="34" rx="6" fill="url(#oro)"/>
+    <path d="M60 139h54M78 122v34M96 122v34" stroke="#b45309" stroke-width="1.5" opacity=".6"/>
+    <rect x="130" y="126" width="96" height="9" rx="4.5" fill="#cbd5e1"/>
+    <rect x="130" y="144" width="62" height="9" rx="4.5" fill="#cbd5e1"/>
+    <circle cx="232" cy="164" r="11" fill="#ff5e14" opacity=".9"/><circle cx="246" cy="164" r="11" fill="#fbbf24" opacity=".9"/>
+  </g>
+  <rect x="186" y="150" width="150" height="132" rx="18" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+  <rect x="186" y="150" width="150" height="34" rx="18" fill="#fff" fill-opacity=".2"/>
+  <path d="M218 142v18M304 142v18" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#fff" fill-opacity=".5">
+    <rect x="204" y="200" width="24" height="18" rx="5"/><rect x="249" y="200" width="24" height="18" rx="5"/><rect x="294" y="200" width="24" height="18" rx="5"/>
+    <rect x="204" y="232" width="24" height="18" rx="5"/><rect x="294" y="232" width="24" height="18" rx="5"/>
+  </g>
+  <rect x="249" y="232" width="24" height="18" rx="5" fill="url(#cian)"/>
+  <path d="M255 241l4.5 4.5 8-9" fill="none" stroke="#001f52" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(86 226)">
+    <ellipse cy="26" rx="48" ry="13" fill="#b45309" opacity=".55"/>
+    <ellipse cy="14" rx="48" ry="13" fill="#d97706"/>
+    <circle r="46" fill="url(#oro)"/><circle r="36" fill="none" stroke="#fff" stroke-width="2.5" opacity=".8"/>
+    <text y="13" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" fill="#92400e">S/</text>
+  </g>
+</svg>

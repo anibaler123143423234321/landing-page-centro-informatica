@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300">
+  <defs>
+    <linearGradient id="oro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="cian" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fe3f7"/><stop offset="1" stop-color="#00b4d8"/></linearGradient>
+  </defs>
+  
+  <rect x="26" y="34" width="200" height="118" rx="22" fill="#fff"/>
+  <path d="M70 152l-6 30 36-30z" fill="#fff"/>
+  <circle cx="84" cy="93" r="10" fill="#073299"/><circle cx="126" cy="93" r="10" fill="#00b4d8"/><circle cx="168" cy="93" r="10" fill="#ff5e14"/>
+  <rect x="150" y="150" width="184" height="104" rx="22" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
+  <path d="M290 254l8 26-36-26z" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="176" y="178" width="112" height="9" rx="4.5" fill="#fff" opacity=".9"/>
+  <rect x="176" y="198" width="132" height="9" rx="4.5" fill="#fff" opacity=".6"/>
+  <rect x="176" y="218" width="82" height="9" rx="4.5" fill="#fff" opacity=".6"/>
+  <g transform="translate(282 78)">
+    <circle r="50" fill="url(#cian)" opacity=".2"/>
+    <path d="M-28 6v-8a28 28 0 0 1 56 0v8" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+    <rect x="-37" y="0" width="16" height="26" rx="8" fill="#fff"/><rect x="21" y="0" width="16" height="26" rx="8" fill="#fff"/>
+    <path d="M29 26v4a12 12 0 0 1-12 12H6" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="2" cy="42" r="6" fill="#ff5e14"/>
+  </g>
+  <g transform="translate(74 232) rotate(-10)">
+    <path d="M-52-26h104v16a10 10 0 0 0 0 20v16H-52V10a10 10 0 0 0 0-20z" fill="url(#oro)"/>
+    <path d="M18-26v52" stroke="#92400e" stroke-width="2" stroke-dasharray="4 5" opacity=".7"/>
+    <rect x="-38" y="-10" width="42" height="7" rx="3.5" fill="#92400e" opacity=".75"/><rect x="-38" y="5" width="28" height="7" rx="3.5" fill="#92400e" opacity=".5"/>
+  </g>
+</svg>

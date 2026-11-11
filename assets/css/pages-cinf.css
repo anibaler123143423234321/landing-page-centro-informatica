@@ -1,0 +1,2216 @@
+/* ===================================================
+   CINF USS - Componentes de páginas interiores
+   Archivo: assets/css/pages-cinf.css
+   Usado por: about-us, service, service-details, pricing-table,
+   team, testmonial, faq, blog y contact.
+   =================================================== */
+
+:root {
+    --cinf-blue: #073299;
+    --cinf-blue-dark: #052575;
+    --cinf-navy: #002b49;
+    --cinf-cyan: #00b4d8;
+    --cinf-orange: #ff5e14;
+    --cinf-ink: #1e293b;
+    --cinf-text: #475569;
+    --cinf-muted: #64748b;
+    --cinf-line: #e2e8f0;
+    --cinf-soft: #f8fafc;
+    --cinf-tint: #eef4ff;
+    --cinf-green: #15803d;
+    --cinf-wa: #128c4a;
+    --cinf-radius: 16px;
+    --cinf-shadow: 0 10px 28px rgba(0, 43, 73, 0.06);
+    --cinf-shadow-hover: 0 16px 36px rgba(0, 43, 73, 0.12);
+    --cinf-heading: var(--oswald), "Oswald", "Arial Narrow", sans-serif;
+    --cinf-body: var(--inter), "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* El tema base anula el contorno de foco en todo el sitio: se restituye
+   para quien navega con teclado. */
+.cinf-page a:focus-visible,
+.cinf-page button:focus-visible,
+.cinf-page summary:focus-visible,
+.cinf-page input:focus-visible {
+    outline: 3px solid var(--cinf-cyan);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+.cinf-page {
+    font-family: var(--cinf-body);
+    color: var(--cinf-text);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.cinf-page p {
+    color: var(--cinf-text);
+    line-height: 1.65;
+}
+
+.cinf-page strong {
+    color: var(--cinf-ink);
+    font-weight: 700;
+}
+
+.cinf-page a {
+    color: var(--cinf-blue);
+}
+
+.cinf-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ===================================================
+   1. Cabecera de página (hero)
+   =================================================== */
+.cinf-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--cinf-navy);
+    color: #fff;
+    isolation: isolate;
+}
+
+.cinf-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+
+.cinf-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(100deg, rgba(0, 31, 82, 0.97) 0%, rgba(7, 50, 153, 0.92) 42%, rgba(7, 50, 153, 0.55) 100%),
+        url("../images/cinf/patron-circuito.svg") right center / 520px auto no-repeat;
+}
+
+.cinf-hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--cinf-cyan), var(--cinf-blue) 55%, var(--cinf-orange));
+}
+
+.cinf-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+    gap: 40px;
+    align-items: center;
+    padding: 56px 0 60px;
+}
+
+.cinf-hero__crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 18px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.cinf-hero__crumbs a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.4);
+    text-underline-offset: 3px;
+}
+
+.cinf-hero__crumbs a:hover {
+    color: var(--cinf-cyan);
+}
+
+.cinf-hero__crumbs li + li::before {
+    content: "/";
+    margin-right: 8px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.cinf-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(0, 180, 216, 0.16);
+    border: 1px solid rgba(0, 180, 216, 0.45);
+    color: #a5f0ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.cinf-hero h1 {
+    font-family: var(--cinf-heading);
+    font-weight: 600;
+    font-size: clamp(32px, 4.4vw, 54px);
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 14px;
+    text-wrap: balance;
+}
+
+.cinf-hero__lead {
+    font-size: clamp(15px, 1.25vw, 18px);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 62ch;
+    margin: 0;
+}
+
+.cinf-page .cinf-hero__lead {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.cinf-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.cinf-hero__art {
+    justify-self: end;
+    width: min(100%, 360px);
+}
+
+.cinf-hero__art img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* ===================================================
+   2. Secciones y encabezados
+   =================================================== */
+.cinf-section {
+    padding: 72px 0;
+    background: #fff;
+}
+
+.cinf-section--soft {
+    background: var(--cinf-soft);
+}
+
+.cinf-section--tight {
+    padding: 48px 0;
+}
+
+.cinf-section--navy {
+    background: linear-gradient(135deg, #001f52 0%, var(--cinf-blue) 100%);
+    color: #fff;
+}
+
+.cinf-head {
+    max-width: 760px;
+    margin: 0 0 36px;
+}
+
+.cinf-head--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.cinf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cinf-orange);
+    margin-bottom: 10px;
+}
+
+.cinf-eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.cinf-head--center .cinf-eyebrow::after {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.cinf-h2 {
+    font-family: var(--cinf-heading);
+    font-weight: 600;
+    font-size: clamp(27px, 3vw, 40px);
+    line-height: 1.15;
+    color: var(--cinf-navy);
+    margin: 0 0 12px;
+    text-wrap: balance;
+}
+
+.cinf-h3 {
+    font-family: var(--cinf-heading);
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.25;
+    color: var(--cinf-navy);
+    margin: 0 0 8px;
+}
+
+.cinf-lead {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--cinf-text);
+    margin: 0;
+}
+
+.cinf-section--navy .cinf-h2,
+.cinf-section--navy .cinf-h3 {
+    color: #fff;
+}
+
+.cinf-page .cinf-section--navy p,
+.cinf-section--navy .cinf-lead {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.cinf-section--navy .cinf-eyebrow {
+    color: #7fe3f7;
+}
+
+.cinf-prose p + p {
+    margin-top: 14px;
+}
+
+.cinf-prose ul {
+    margin: 14px 0 0;
+}
+
+/* ===================================================
+   3. Rejillas
+   =================================================== */
+.cinf-grid {
+    display: grid;
+    gap: 24px;
+}
+
+.cinf-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cinf-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cinf-grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.cinf-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 48px;
+    align-items: center;
+}
+
+.cinf-split--top {
+    align-items: start;
+}
+
+.cinf-split--wide-left {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+}
+
+/* ===================================================
+   4. Botones
+   =================================================== */
+.cinf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    border: 1.5px solid transparent;
+    font-family: var(--cinf-body);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cinf-btn:hover {
+    transform: translateY(-2px);
+}
+
+.cinf-page .cinf-btn--primary {
+    background: var(--cinf-blue);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(7, 50, 153, 0.25);
+}
+
+.cinf-page .cinf-btn--primary:hover {
+    background: var(--cinf-blue-dark);
+    color: #fff;
+}
+
+.cinf-page .cinf-btn--wa {
+    background: var(--cinf-wa);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(18, 140, 74, 0.25);
+}
+
+.cinf-page .cinf-btn--wa:hover {
+    background: #0d6f3a;
+    color: #fff;
+}
+
+.cinf-page .cinf-btn--light {
+    background: #fff;
+    color: var(--cinf-blue);
+}
+
+.cinf-page .cinf-btn--light:hover {
+    background: var(--cinf-tint);
+    color: var(--cinf-blue-dark);
+}
+
+.cinf-page .cinf-btn--ghost {
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.cinf-page .cinf-btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+.cinf-page .cinf-btn--outline {
+    background: #fff;
+    color: var(--cinf-blue);
+    border-color: #c7d6f5;
+}
+
+.cinf-page .cinf-btn--outline:hover {
+    background: var(--cinf-tint);
+    border-color: var(--cinf-blue);
+}
+
+.cinf-btn--sm {
+    min-height: 38px;
+    padding: 8px 14px;
+    font-size: 13.5px;
+    border-radius: 8px;
+}
+
+.cinf-btn--block {
+    width: 100%;
+}
+
+.cinf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: var(--cinf-blue);
+    text-decoration: none;
+}
+
+.cinf-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ===================================================
+   5. Tarjetas base, chips y avisos
+   =================================================== */
+.cinf-card {
+    background: #fff;
+    border: 1px solid var(--cinf-line);
+    border-radius: var(--cinf-radius);
+    padding: 26px;
+    box-shadow: var(--cinf-shadow);
+}
+
+.cinf-card--hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.cinf-card--hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--cinf-shadow-hover);
+    border-color: #c7d6f5;
+}
+
+.cinf-card--accent {
+    border-top: 4px solid var(--cinf-blue);
+}
+
+.cinf-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--cinf-tint);
+    color: var(--cinf-blue);
+    font-size: 21px;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+}
+
+.cinf-icon--orange {
+    background: #fff1e8;
+    color: #c2410c;
+}
+
+.cinf-icon--cyan {
+    background: #e0f7fb;
+    color: #0e7490;
+}
+
+.cinf-icon--green {
+    background: #e7f6ec;
+    color: var(--cinf-green);
+}
+
+.cinf-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--cinf-tint);
+    color: var(--cinf-blue);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.cinf-chip--code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: 0;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+.cinf-chip--orange {
+    background: #fff1e8;
+    color: #c2410c;
+}
+
+.cinf-chip--green {
+    background: #e7f6ec;
+    color: var(--cinf-green);
+}
+
+.cinf-chip--slate {
+    background: #f1f5f9;
+    color: #334155;
+}
+
+.cinf-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.cinf-note {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border: 1px solid #c7d6f5;
+    background: var(--cinf-tint);
+    color: var(--cinf-ink);
+}
+
+.cinf-note > i {
+    color: var(--cinf-blue);
+    font-size: 20px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.cinf-page .cinf-note p {
+    color: var(--cinf-ink);
+    margin: 0;
+}
+
+.cinf-note--warn {
+    border-color: #fed7aa;
+    background: #fff7ed;
+}
+
+.cinf-note--warn > i {
+    color: #c2410c;
+}
+
+.cinf-list {
+    display: grid;
+    gap: 10px;
+}
+
+.cinf-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--cinf-text);
+    line-height: 1.55;
+}
+
+.cinf-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #e7f6ec url("../images/cinf/icono-check.svg") center / 10px 10px no-repeat;
+}
+
+.cinf-section--navy .cinf-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================================
+   6. Indicadores
+   =================================================== */
+.cinf-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cinf-stat {
+    padding: 24px 20px;
+    border-radius: var(--cinf-radius);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+}
+
+.cinf-stat__num {
+    display: block;
+    font-family: var(--cinf-heading);
+    font-weight: 600;
+    font-size: clamp(38px, 4vw, 52px);
+    line-height: 1;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+}
+
+.cinf-stat__label {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.cinf-stat__note {
+    display: block;
+    margin-top: 2px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ===================================================
+   7. Pasos numerados
+   =================================================== */
+.cinf-steps {
+    counter-reset: cinf-step;
+    display: grid;
+    gap: 16px;
+}
+
+.cinf-steps > li {
+    counter-increment: cinf-step;
+    position: relative;
+    padding: 18px 20px 18px 72px;
+    background: #fff;
+    border: 1px solid var(--cinf-line);
+    border-radius: 14px;
+    min-height: 68px;
+}
+
+.cinf-steps > li::before {
+    content: counter(cinf-step);
+    position: absolute;
+    left: 18px;
+    top: 16px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--cinf-blue);
+    color: #fff;
+    font-family: var(--cinf-heading);
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinf-steps strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.cinf-steps--row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ===================================================
+   8. Imágenes de contenido
+   =================================================== */
+.cinf-figure {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 50px rgba(0, 43, 73, 0.16);
+    background: #dbe4f3;
+}
+
+.cinf-figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cinf-figure--tall {
+    aspect-ratio: 4 / 5;
+}
+
+.cinf-figure--wide {
+    aspect-ratio: 16 / 10;
+}
+
+.cinf-figure figcaption {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    right: 14px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(0, 31, 82, 0.88);
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.cinf-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.cinf-gallery .cinf-figure {
+    aspect-ratio: 1 / 1;
+    box-shadow: var(--cinf-shadow);
+}
+
+/* ===================================================
+   9. Catálogo de cursos
+   =================================================== */
+.cinf-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.cinf-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cinf-filter {
+    padding: 9px 16px;
+    border-radius: 999px;
+    border: 1.5px solid var(--cinf-line);
+    background: #fff;
+    color: var(--cinf-ink);
+    font-family: var(--cinf-body);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cinf-filter:hover {
+    border-color: var(--cinf-blue);
+    color: var(--cinf-blue);
+}
+
+.cinf-filter[aria-pressed="true"] {
+    background: var(--cinf-blue);
+    border-color: var(--cinf-blue);
+    color: #fff;
+}
+
+.cinf-search {
+    position: relative;
+    flex: 1 1 240px;
+    max-width: 340px;
+}
+
+.cinf-search input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px 0 40px;
+    border: 1.5px solid var(--cinf-line);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--cinf-ink);
+    font-family: var(--cinf-body);
+    font-size: 15px;
+}
+
+.cinf-search input:focus {
+    border-color: var(--cinf-blue);
+}
+
+.cinf-search i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cinf-muted);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.cinf-count {
+    font-size: 14px;
+    color: var(--cinf-muted);
+    margin: 0 0 18px;
+}
+
+.cinf-course {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 22px;
+}
+
+.cinf-course[hidden] {
+    display: none;
+}
+
+.cinf-course__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.cinf-course__icon {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.cinf-course__cat {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cinf-orange);
+    margin-bottom: 4px;
+}
+
+.cinf-course .cinf-h3 {
+    font-size: 20px;
+}
+
+.cinf-course__desc {
+    font-size: 14.5px;
+    margin: 0 0 14px;
+}
+
+.cinf-course__meta {
+    font-size: 13px;
+    color: var(--cinf-muted);
+    margin: 0 0 16px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--cinf-line);
+}
+
+.cinf-course__meta b {
+    color: var(--cinf-ink);
+    font-weight: 700;
+}
+
+.cinf-course__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.cinf-empty {
+    padding: 36px 20px;
+    text-align: center;
+    border: 1.5px dashed var(--cinf-line);
+    border-radius: var(--cinf-radius);
+    background: #fff;
+}
+
+/* ===================================================
+   10. Tablas y tarifas
+   =================================================== */
+.cinf-table-wrap {
+    border: 1px solid var(--cinf-line);
+    border-radius: var(--cinf-radius);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--cinf-shadow);
+}
+
+.cinf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.cinf-table caption {
+    caption-side: top;
+    text-align: left;
+    padding: 16px 20px;
+    font-family: var(--cinf-heading);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    border-bottom: 1px solid var(--cinf-line);
+}
+
+.cinf-table th,
+.cinf-table td {
+    padding: 14px 20px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--cinf-line);
+}
+
+.cinf-table thead th {
+    background: var(--cinf-blue);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-bottom: 0;
+}
+
+.cinf-table tbody th {
+    color: var(--cinf-ink);
+    font-weight: 700;
+}
+
+.cinf-table tbody tr:last-child th,
+.cinf-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.cinf-table tbody tr:nth-child(even) {
+    background: #fafcff;
+}
+
+.cinf-table .cinf-num {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    color: var(--cinf-blue);
+    white-space: nowrap;
+}
+
+.cinf-table small {
+    display: block;
+    font-size: 13px;
+    color: var(--cinf-muted);
+    font-weight: 400;
+}
+
+.cinf-plan {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cinf-plan__head {
+    padding: 22px 24px 18px;
+    background: linear-gradient(135deg, #001f52, var(--cinf-blue));
+    color: #fff;
+}
+
+.cinf-plan--gex .cinf-plan__head {
+    background: linear-gradient(135deg, #0b3b4a, #0e7490);
+}
+
+.cinf-plan--filial .cinf-plan__head {
+    background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.cinf-plan--tramite .cinf-plan__head {
+    background: linear-gradient(135deg, #7c2d12, #c2410c);
+}
+
+.cinf-plan__tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 6px;
+}
+
+.cinf-plan__head h3 {
+    font-family: var(--cinf-heading);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.cinf-page .cinf-plan__head p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.cinf-plan__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px 24px 24px;
+}
+
+.cinf-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cinf-line);
+}
+
+.cinf-price:first-child {
+    padding-top: 0;
+}
+
+.cinf-price__label {
+    flex: 1;
+    font-size: 14.5px;
+    color: var(--cinf-ink);
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.cinf-price__label small {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--cinf-muted);
+}
+
+.cinf-price__value {
+    font-family: var(--cinf-heading);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--cinf-blue);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.cinf-price__value--text {
+    font-family: var(--cinf-body);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cinf-muted);
+}
+
+.cinf-plan__body .cinf-list {
+    margin: 18px 0 22px;
+    font-size: 14.5px;
+}
+
+.cinf-plan__body .cinf-btn {
+    margin-top: auto;
+}
+
+.cinf-pay {
+    position: relative;
+    padding: 26px 22px 22px;
+    text-align: center;
+}
+
+.cinf-pay__n {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--cinf-blue);
+    color: #fff;
+    font-family: var(--cinf-heading);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 5px #fff;
+}
+
+.cinf-pay .cinf-icon {
+    margin: 4px auto 12px;
+}
+
+.cinf-pay h3 {
+    font-family: var(--cinf-heading);
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    margin: 0 0 8px;
+}
+
+.cinf-pay__amounts {
+    display: grid;
+    gap: 6px;
+    margin: 14px 0 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--cinf-soft);
+    font-size: 14px;
+    text-align: left;
+}
+
+.cinf-pay__amounts div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cinf-pay__amounts b {
+    color: var(--cinf-blue);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.cinf-pay p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.cinf-bank {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.cinf-bank__logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.cinf-bank h3 {
+    font-family: var(--cinf-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    margin: 0 0 2px;
+}
+
+.cinf-bank p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.cinf-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 6px 8px 6px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--cinf-line);
+    background: var(--cinf-soft);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cinf-ink);
+}
+
+.cinf-copy button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: var(--cinf-blue);
+    color: #fff;
+    font-family: var(--cinf-body);
+    font-size: 12.5px;
+    font-weight: 700;
+}
+
+.cinf-copy button:hover {
+    background: var(--cinf-blue-dark);
+}
+
+/* ===================================================
+   11. Ruta de acreditación (línea de tiempo por ciclos)
+   =================================================== */
+.cinf-route {
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    gap: 14px;
+}
+
+.cinf-route__stage {
+    border-radius: var(--cinf-radius);
+    border: 1px solid var(--cinf-line);
+    background: #fff;
+    overflow: hidden;
+}
+
+.cinf-route__stage h3 {
+    padding: 12px 18px;
+    font-family: var(--cinf-heading);
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: #b91c3c;
+    margin: 0;
+}
+
+.cinf-route__stage--now h3 {
+    background: var(--cinf-blue);
+}
+
+.cinf-route__stage--next h3 {
+    background: var(--cinf-green);
+}
+
+.cinf-route__stage--now {
+    border-color: var(--cinf-blue);
+    box-shadow: 0 12px 30px rgba(7, 50, 153, 0.16);
+}
+
+.cinf-route__cycles {
+    display: flex;
+    gap: 8px;
+    padding: 16px 18px 6px;
+}
+
+.cinf-route__cycles span {
+    flex: 1;
+    padding: 8px 4px;
+    border-radius: 10px;
+    background: var(--cinf-soft);
+    border: 1px solid var(--cinf-line);
+    text-align: center;
+    font-family: var(--cinf-heading);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cinf-ink);
+    line-height: 1.1;
+}
+
+.cinf-route__cycles span small {
+    display: block;
+    font-family: var(--cinf-body);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cinf-muted);
+}
+
+.cinf-route__stage p {
+    padding: 8px 18px 18px;
+    font-size: 14.5px;
+    margin: 0;
+}
+
+/* ===================================================
+   12. Equipo
+   =================================================== */
+.cinf-team {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cinf-team__photo {
+    position: relative;
+    aspect-ratio: 4 / 4.4;
+    background: #000;
+    overflow: hidden;
+}
+
+.cinf-team__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+.cinf-team:hover .cinf-team__photo img {
+    transform: scale(1.04);
+}
+
+.cinf-team__photo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45%;
+    background: linear-gradient(to top, rgba(0, 31, 82, 0.9), rgba(0, 31, 82, 0));
+}
+
+.cinf-team__role {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    z-index: 1;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--cinf-orange);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.cinf-team__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 22px 22px;
+}
+
+.cinf-team__body h3 {
+    font-family: var(--cinf-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    margin: 0 0 2px;
+}
+
+.cinf-team__title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--cinf-blue);
+    margin: 0 0 10px;
+}
+
+.cinf-team__body p {
+    font-size: 14.5px;
+    margin: 0 0 14px;
+}
+
+.cinf-team__body .cinf-chips {
+    margin-top: auto;
+}
+
+/* ===================================================
+   13. Preguntas frecuentes
+   =================================================== */
+.cinf-faq {
+    display: grid;
+    gap: 12px;
+}
+
+.cinf-faq__item {
+    border: 1px solid var(--cinf-line);
+    border-radius: 14px;
+    background: #fff;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cinf-faq__item[open] {
+    border-color: #c7d6f5;
+    box-shadow: var(--cinf-shadow);
+}
+
+.cinf-faq__item summary {
+    position: relative;
+    display: block;
+    padding: 18px 56px 18px 22px;
+    font-family: var(--cinf-heading);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--cinf-navy);
+    cursor: pointer;
+    list-style: none;
+}
+
+.cinf-faq__item summary::-webkit-details-marker {
+    display: none;
+}
+
+.cinf-faq__item summary::after {
+    content: "";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    border-right: 2.5px solid var(--cinf-blue);
+    border-bottom: 2.5px solid var(--cinf-blue);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.25s ease;
+}
+
+.cinf-faq__item[open] summary::after {
+    transform: translateY(-25%) rotate(-135deg);
+}
+
+.cinf-faq__item summary:hover {
+    color: var(--cinf-blue);
+}
+
+.cinf-faq__answer {
+    padding: 0 22px 22px;
+}
+
+.cinf-faq__answer p + p,
+.cinf-faq__answer p + ul,
+.cinf-faq__answer p + ol,
+.cinf-faq__answer ul + p,
+.cinf-faq__answer ol + p {
+    margin-top: 12px;
+}
+
+.cinf-faq__answer ol {
+    counter-reset: cinf-faq;
+    display: grid;
+    gap: 8px;
+}
+
+.cinf-faq__answer ol li {
+    counter-increment: cinf-faq;
+    position: relative;
+    padding-left: 34px;
+}
+
+.cinf-faq__answer ol li::before {
+    content: counter(cinf-faq);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: var(--cinf-tint);
+    color: var(--cinf-blue);
+    font-size: 12.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinf-faq__group {
+    font-family: var(--cinf-heading);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--cinf-orange);
+    margin: 30px 0 4px;
+}
+
+.cinf-faq__group:first-child {
+    margin-top: 0;
+}
+
+.cinf-aside {
+    position: sticky;
+    top: 92px;
+    display: grid;
+    gap: 16px;
+}
+
+/* ===================================================
+   14. Testimonios
+   =================================================== */
+.cinf-quote {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 26px 26px 22px;
+}
+
+.cinf-quote::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 30px;
+    margin-bottom: 14px;
+    background: url("../images/cinf/icono-comillas.svg") left center / contain no-repeat;
+}
+
+.cinf-quote blockquote {
+    margin: 0 0 20px;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--cinf-ink);
+}
+
+.cinf-quote footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--cinf-line);
+}
+
+.cinf-quote__avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--cinf-blue);
+    color: #fff;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.cinf-quote__who {
+    font-weight: 700;
+    color: var(--cinf-ink);
+    font-size: 14.5px;
+    line-height: 1.3;
+}
+
+.cinf-quote__who small {
+    display: block;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--cinf-muted);
+}
+
+/* ===================================================
+   15. Noticias y convocatorias
+   =================================================== */
+.cinf-news {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cinf-news__media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #dbe4f3;
+}
+
+.cinf-news__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.cinf-news:hover .cinf-news__media img {
+    transform: scale(1.05);
+}
+
+.cinf-news__media .cinf-chip {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cinf-news__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 22px 22px;
+}
+
+.cinf-news__body .cinf-h3 {
+    font-size: 20px;
+}
+
+.cinf-news__body p {
+    font-size: 14.5px;
+    margin: 0 0 16px;
+}
+
+.cinf-news__body .cinf-link {
+    margin-top: auto;
+}
+
+.cinf-article {
+    padding: 32px;
+    scroll-margin-top: 96px;
+}
+
+.cinf-article + .cinf-article {
+    margin-top: 24px;
+}
+
+.cinf-article__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.cinf-article h2 {
+    font-family: var(--cinf-heading);
+    font-size: clamp(23px, 2.4vw, 30px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--cinf-navy);
+    margin: 0 0 12px;
+}
+
+.cinf-article h3 {
+    font-family: var(--cinf-heading);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    margin: 22px 0 10px;
+}
+
+.cinf-article p + p {
+    margin-top: 12px;
+}
+
+.cinf-article .cinf-steps,
+.cinf-article .cinf-list,
+.cinf-article .cinf-note {
+    margin-top: 16px;
+}
+
+.cinf-article__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+/* ===================================================
+   16. Contacto
+   =================================================== */
+.cinf-contact {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cinf-contact h3 {
+    font-family: var(--cinf-heading);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cinf-navy);
+    margin: 0 0 6px;
+}
+
+.cinf-contact p {
+    font-size: 15px;
+    margin: 0 0 14px;
+}
+
+.cinf-contact__value {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cinf-ink);
+    overflow-wrap: anywhere;
+}
+
+.cinf-contact .cinf-btn,
+.cinf-contact .cinf-link {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.cinf-map {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--cinf-line);
+    box-shadow: var(--cinf-shadow);
+    background: #dbe4f3;
+    min-height: 380px;
+}
+
+.cinf-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    border: 0;
+}
+
+.cinf-hours {
+    display: grid;
+    gap: 0;
+}
+
+.cinf-hours div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--cinf-line);
+    font-size: 15px;
+}
+
+.cinf-hours div:last-child {
+    border-bottom: 0;
+}
+
+.cinf-hours dt {
+    font-weight: 700;
+    color: var(--cinf-ink);
+}
+
+.cinf-hours dd {
+    text-align: right;
+    color: var(--cinf-text);
+    font-variant-numeric: tabular-nums;
+}
+
+/* ===================================================
+   17. Aliados y franja de cierre
+   =================================================== */
+.cinf-partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.cinf-partner {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid var(--cinf-line);
+    border-radius: 14px;
+    background: #fff;
+}
+
+.cinf-partner img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.cinf-partner b {
+    display: block;
+    color: var(--cinf-ink);
+    line-height: 1.25;
+}
+
+.cinf-partner span {
+    font-size: 13px;
+    color: var(--cinf-muted);
+    line-height: 1.35;
+}
+
+/* Va sobre fondo blanco para empalmar con la onda superior del pie de página */
+.cinf-cta {
+    padding: 56px 0 72px;
+    background: #fff;
+}
+
+.cinf-cta__inner {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 38px 42px;
+    border-radius: 24px;
+    background:
+        url("../images/cinf/patron-circuito.svg") right -40px center / 440px auto no-repeat,
+        linear-gradient(120deg, #001f52 0%, var(--cinf-blue) 60%, #0a4bd1 100%);
+    color: #fff;
+    box-shadow: 0 24px 50px rgba(7, 50, 153, 0.22);
+}
+
+.cinf-cta h2 {
+    font-family: var(--cinf-heading);
+    font-size: clamp(24px, 2.6vw, 32px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    margin: 0 0 6px;
+}
+
+.cinf-page .cinf-cta p {
+    color: rgba(255, 255, 255, 0.86);
+    margin: 0;
+    max-width: 60ch;
+}
+
+.cinf-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ===================================================
+   18. Variantes y utilidades
+   =================================================== */
+.cinf-skip {
+    position: absolute;
+    left: 12px;
+    top: -60px;
+    z-index: 1000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--cinf-blue);
+    color: #fff;
+    font-weight: 700;
+}
+
+.cinf-skip:focus {
+    top: 12px;
+    color: #fff;
+}
+
+.cinf-hero--solo .cinf-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 780px;
+    margin: 0;
+}
+
+.cinf-list--spaced,
+.cinf-steps--spaced {
+    margin-top: 18px;
+}
+
+.cinf-btn--spaced,
+.cinf-link--spaced {
+    margin-top: 16px;
+}
+
+.cinf-note--spaced,
+.cinf-grid--spaced,
+.cinf-card--spaced,
+.cinf-table-wrap--spaced {
+    margin-top: 24px;
+}
+
+.cinf-split--spaced,
+.cinf-partners--spaced,
+.cinf-stats--spaced {
+    margin-top: 40px;
+}
+
+.cinf-grid--pay {
+    padding-top: 16px;
+}
+
+.cinf-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.cinf-actions--center {
+    justify-content: center;
+}
+
+.cinf-stack {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.cinf-card--navy {
+    background: linear-gradient(135deg, #001f52 0%, var(--cinf-blue) 100%);
+    border-color: transparent;
+    color: #fff;
+}
+
+.cinf-card--navy .cinf-h3 {
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.cinf-card--navy .cinf-list li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cinf-card__badge {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 14px;
+}
+
+.cinf-chips--wrap {
+    margin: 10px 0 18px;
+}
+
+.cinf-chips--wrap .cinf-chip {
+    white-space: normal;
+}
+
+.cinf-courselist {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.cinf-courselist li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    color: var(--cinf-ink);
+    font-size: 15px;
+}
+
+.cinf-steps--compact {
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.cinf-steps--compact > li {
+    padding: 12px 14px 12px 56px;
+    min-height: 52px;
+    font-size: 14.5px;
+    background: var(--cinf-soft);
+}
+
+.cinf-steps--compact > li::before {
+    left: 12px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.cinf-steps--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cinf-stat--left {
+    text-align: left;
+    padding: 26px;
+}
+
+.cinf-page .cinf-stat--left p {
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 15px;
+    margin: 0;
+}
+
+.cinf-stats--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cinf-stats--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cinf-price__unit {
+    display: block;
+    font-family: var(--cinf-body);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cinf-muted);
+    text-align: right;
+}
+
+.cinf-table__foot {
+    padding: 14px 20px;
+    border-top: 1px solid var(--cinf-line);
+    background: var(--cinf-soft);
+    font-size: 14px;
+}
+
+.cinf-footnote {
+    max-width: 760px;
+    margin: 28px auto 0;
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--cinf-muted);
+}
+
+.cinf-page .cinf-footnote {
+    color: var(--cinf-muted);
+}
+
+.cinf-toc {
+    display: grid;
+    gap: 2px;
+    margin-top: 6px;
+}
+
+.cinf-toc a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cinf-ink);
+}
+
+.cinf-toc a:hover {
+    background: var(--cinf-tint);
+    color: var(--cinf-blue);
+}
+
+.cinf-article__after {
+    margin-top: 16px;
+}
+
+.cinf-icon--flat {
+    margin-bottom: 0;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+}
+
+/* ===================================================
+   19. Responsivo
+   =================================================== */
+@media (max-width: 1100px) {
+    .cinf-steps--3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cinf-grid--4,
+    .cinf-stats,
+    .cinf-steps--row,
+    .cinf-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cinf-grid--3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cinf-split,
+    .cinf-split--wide-left {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+    }
+
+    .cinf-aside {
+        position: static;
+    }
+
+    .cinf-route {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cinf-figure--tall {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 860px) {
+    .cinf-hero__inner {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 40px 0 44px;
+    }
+
+    .cinf-hero__art {
+        display: none;
+    }
+
+    .cinf-hero::before {
+        background: linear-gradient(100deg, rgba(0, 31, 82, 0.97) 0%, rgba(7, 50, 153, 0.9) 100%);
+    }
+
+    .cinf-section {
+        padding: 52px 0;
+    }
+}
+
+@media (max-width: 680px) {
+    .cinf-grid--2,
+    .cinf-grid--3,
+    .cinf-grid--4,
+    .cinf-steps--row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cinf-stats,
+    .cinf-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .cinf-stats--3 {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cinf-card {
+        padding: 20px;
+    }
+
+    .cinf-cta__inner {
+        padding: 28px 22px;
+    }
+
+    .cinf-article {
+        padding: 22px 20px;
+    }
+
+    .cinf-course__actions {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cinf-search {
+        max-width: none;
+    }
+
+    .cinf-hero__actions .cinf-btn,
+    .cinf-cta__actions .cinf-btn {
+        flex: 1 1 100%;
+    }
+
+    .cinf-cta__actions {
+        width: 100%;
+    }
+
+    /* Las tablas pasan a tarjetas apiladas: cada celda muestra su encabezado */
+    .cinf-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    .cinf-table,
+    .cinf-table tbody,
+    .cinf-table tr,
+    .cinf-table th,
+    .cinf-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .cinf-table caption {
+        display: block;
+    }
+
+    .cinf-table tbody tr {
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--cinf-line);
+    }
+
+    .cinf-table tbody tr:last-child {
+        border-bottom: 0;
+    }
+
+    .cinf-table tbody th,
+    .cinf-table tbody td {
+        padding: 3px 0;
+        border: 0;
+    }
+
+    .cinf-table tbody td[data-label] {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .cinf-table tbody td[data-label]::before {
+        content: attr(data-label);
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--cinf-muted);
+    }
+
+    .cinf-hours div {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .cinf-hours dd {
+        text-align: left;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cinf-btn,
+    .cinf-card--hover,
+    .cinf-team__photo img,
+    .cinf-news__media img {
+        transition: none;
+    }
+
+    .cinf-btn:hover,
+    .cinf-card--hover:hover {
+        transform: none;
+    }
+}
