@@ -109,7 +109,7 @@ Pendientes de imagen:
 * **Correo Institucional:** `centro.informatica@uss.edu.pe`
 * **Campus Principal:** Km 5 Carretera a Pimentel, Chiclayo
 * **Sede Chiclayo:** Calle Elías Aguirre 933, Chiclayo
-* **Horario de Atención:** Lun - Vie: 8:00 AM - 1:00 PM y 2:00 PM - 6:00 PM | Sáb: 8:00 AM - 1:00 PM
+* **Horario de Atención:** Lun - Vie: 8:00 AM - 1:00 PM y 2:00 PM - 6:00 PM | Sáb: 9:00 AM - 12:00 PM
 
 ---
 
