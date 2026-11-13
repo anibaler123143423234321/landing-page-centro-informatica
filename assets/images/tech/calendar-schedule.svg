@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="calGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4D8"/>
+      <stop offset="100%" stop-color="#073299"/>
+    </linearGradient>
+    <linearGradient id="calOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6200"/>
+      <stop offset="100%" stop-color="#FF9E00"/>
+    </linearGradient>
+  </defs>
+  <!-- Cuerpo del calendario -->
+  <rect x="9" y="13" width="40" height="40" rx="7" fill="#FFFFFF" stroke="url(#calGrad)" stroke-width="2.5"/>
+  <!-- Cabecera -->
+  <path d="M 9 20 a 7 7 0 0 1 7 -7 h 26 a 7 7 0 0 1 7 7 v 5 h -40 Z" fill="url(#calGrad)"/>
+  <!-- Anillas -->
+  <line x1="19" y1="8" x2="19" y2="17" stroke="#073299" stroke-width="3" stroke-linecap="round"/>
+  <line x1="39" y1="8" x2="39" y2="17" stroke="#073299" stroke-width="3" stroke-linecap="round"/>
+  <!-- Casillas de días -->
+  <rect x="15" y="30" width="7" height="6" rx="1.5" fill="#00B4D8"/>
+  <rect x="25.5" y="30" width="7" height="6" rx="1.5" fill="url(#calOrange)"/>
+  <rect x="36" y="30" width="7" height="6" rx="1.5" fill="#00B4D8" opacity="0.45"/>
+  <rect x="15" y="40" width="7" height="6" rx="1.5" fill="#00B4D8" opacity="0.45"/>
+  <rect x="25.5" y="40" width="7" height="6" rx="1.5" fill="#00B4D8"/>
+  <!-- Reloj: el horario -->
+  <circle cx="46" cy="46" r="12" fill="#FFFFFF" stroke="url(#calOrange)" stroke-width="3"/>
+  <path d="M 46 39 L 46 46 L 51 49" fill="none" stroke="#073299" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

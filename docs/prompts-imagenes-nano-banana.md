@@ -187,3 +187,13 @@ Recomendación de encuadre: que las cuatro fotos tengan la cabeza a la misma alt
 | `assets/images/sipan-campuss.jpg` | Fotografía del campus. Reemplázala solo por otra foto real. |
 | `assets/images/resource/about.jpg` | Fachada del Centro Empresarial. Reemplázala solo por otra foto real. |
 | `assets/images/logo-cinf-uss.png` | Logotipo institucional. |
+
+
+### Tarjeta «Cursos y Horarios» de la portada
+
+- **Archivo:** `assets/images/resource/feature-image-4.jpg` (1376 × 768 px)
+- **Se usa en:** tercera tarjeta de «Servicios Destacados» en `index.html` (hoy usa `feature-image-2.jpg` de forma provisional; al generar esta, cambia el `src`)
+
+```text
+Una estudiante universitaria peruana sonriente revisa en su laptop un calendario académico con bloques de colores azul y naranja, sin texto legible. A su lado, un teléfono muestra una cuadrícula de horario. Escritorio claro en una biblioteca moderna, luz natural, tonos azul institucional. Sin logotipos ni marcas. El sujeto principal en la mitad superior de la imagen. Formato horizontal 16:9.
+```

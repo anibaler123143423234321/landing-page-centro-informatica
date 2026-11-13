@@ -72,7 +72,7 @@
 .feature-cards-row {
     display: flex !important;
     flex-wrap: wrap !important;
-    max-width: 900px !important;
+    max-width: 1180px !important;
     margin: 0 auto !important;
 }
 
@@ -292,6 +292,18 @@
 /* ===================================================
    6. Responsivo en Móviles (<= 767px)
    =================================================== */
+/* Con tres tarjetas, en tablet la tercera baja a otra fila y necesita separación */
+@media (min-width: 768px) and (max-width: 991px) {
+    .cinf-services-section {
+        min-height: auto !important;
+        padding: 32px 0 40px !important;
+    }
+
+    .feature-cards-row>[class*="col-"] {
+        margin-bottom: 24px !important;
+    }
+}
+
 @media (max-width: 767px) {
     .cinf-services-section {
         min-height: auto !important;

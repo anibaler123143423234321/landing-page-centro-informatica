@@ -31,7 +31,7 @@ Construir y perfeccionar el portal web estático y vitrina informativa oficial p
 * **Prohibición Estricta de Frameworks**: No utilizar React, Next.js, Vite ni dependencias con hidratación de cliente en este directorio.
 * **Separación de capas**: el HTML no lleva bloques `<style>`, atributos `style=""` ni `<script>` en línea. Los estilos van en `assets/css/` y el comportamiento en `assets/js/`.
 * **Estructura de Archivos**:
-  - `index.html`: Portada principal (portal de 2 tarjetas: Chatbot y GEX).
+  - `index.html`: Portada principal (portal de 3 tarjetas: Asistente de Consultas, GEX y Cursos y Horarios).
   - `about-us.html`: Quiénes somos, historia, misión, visión, pilares y alianzas.
   - `service.html` & `service-details.html`: Catálogo de cursos con filtros y ficha de la Ruta PROTECH XP.
   - `pricing-table.html`: Tarifario oficial, modalidades de pago y canales autorizados.
