@@ -314,3 +314,58 @@
         margin-bottom: 20px !important;
     }
 }
+
+/* ===================================================
+   WhatsApp flotante: círculo verde con el ícono, abajo a la derecha
+   =================================================== */
+.wa-flotante {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #ffffff;
+    box-shadow: 0 8px 24px -8px rgb(11 22 48 / 0.45);
+    transition: transform 160ms cubic-bezier(.2, .8, .2, 1), box-shadow 160ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.wa-flotante:hover,
+.wa-flotante:focus-visible {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px -8px rgb(11 22 48 / 0.5);
+}
+
+.wa-flotante:active {
+    transform: translateY(1px) scale(0.97);
+}
+
+.wa-flotante:focus-visible {
+    outline: 3px solid #073299;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .wa-flotante {
+        right: 16px;
+        bottom: 16px;
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wa-flotante {
+        transition: none;
+    }
+
+    .wa-flotante:hover,
+    .wa-flotante:active {
+        transform: none;
+    }
+}

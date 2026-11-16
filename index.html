@@ -17,7 +17,6 @@
     <!-- Preload de Recursos Críticos -->
     <link rel="preload" as="image" href="assets/images/logo-cinf-uss.png" />
     <link rel="preload" as="image" href="assets/images/shape/shape-1.png" />
-    <link rel="preload" as="image" href="assets/images/icons/icon-bar-2.png" />
     <link rel="preload" as="image" href="assets/images/shape/banner-shape.svg" />
     <link rel="preload" as="image" href="assets/images/resource/feature-image-1.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/feature-image-2.jpg" />
@@ -38,17 +37,17 @@
 
     <!-- Hojas de Estilo Modulares CINF USS -->
     <link rel="stylesheet" href="assets/css/header-cinf.css?v=10" />
-    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=11" />
+    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=13" />
 </head>
 
 <body>
     <div class="boxed_wrapper" id="top">
 
         <!-- ==========================================
-             HEADER PRINCIPAL
+             HEADER PRINCIPAL: solo el logo (sin menú, Portal GEX ni WhatsApp;
+             el WhatsApp va flotante abajo a la derecha)
              ========================================== -->
         <header class="main-header header-style-one">
-            <!-- Header Upper -->
             <div class="header-upper">
                 <div class="auto-container">
                     <div class="inner-container">
@@ -60,93 +59,12 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="header-divider"></div>
-                            <div class="nav-outer">
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                        <ul class="navigation clearfix">
-                                            <li class="current dropdown"><a href="/">Inicio</a>
-                                                <ul>
-                                                    <li><a href="/">Portada Principal</a></li>
-                                                    <li><a href="about-us.html">Sobre el CINF</a></li>
-                                                    <li><a href="contact.html">Sedes y Horarios</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="about-us.html">Nosotros</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">Quiénes Somos</a></li>
-                                                    <li><a href="team.html">Plana Docente</a></li>
-                                                    <li><a href="testmonial.html">Testimonios de Alumnos</a></li>
-                                                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="service.html">Acreditación</a>
-                                                <ul>
-                                                    <li><a href="/gex"><strong>Programa GEX</strong> (Adultos que
-                                                            Trabajan)</a></li>
-                                                    <li><a href="service-details.html">Ruta PROTECH XP (Word &amp;
-                                                            Excel)</a></li>
-                                                    <li><a href="service.html">Plan Tradicional (Computación II y
-                                                            III)</a></li>
-                                                    <li><a href="pricing-table.html">Tarifas y Modalidades (Chiclayo y
-                                                            Filial)</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="service.html">Cursos</a>
-                                                <ul>
-                                                    <li><a href="service-details.html">Ofimática Word 365 (Protech
-                                                            XP)</a></li>
-                                                    <li><a href="service.html">Excel 365 y Analítica de Datos</a></li>
-                                                    <li><a href="service.html">Power BI Business Intelligence</a></li>
-                                                    <li><a href="service.html">AutoCAD 2D / 3D</a></li>
-                                                    <li><a href="service.html">Certificación MOS (Microsoft)</a></li>
-                                                    <li><a href="service.html">Ver Catálogo Completo</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="/tickets" target="_blank"
-                                                    rel="noopener noreferrer">Atención al Alumno</a>
-                                                <ul>
-                                                    <li><a href="/gex"><strong>Portal GEX</strong> Computación</a></li>
-                                                    <li><a href="/chatbot" target="_blank"
-                                                            rel="noopener noreferrer"><strong>Chatbot SipánBot
-                                                                24/7</strong></a></li>
-                                                    <li><a href="/tickets" target="_blank"
-                                                            rel="noopener noreferrer"><strong>Mesa de Tickets y
-                                                                Consultas</strong></a></li>
-                                                    <li><a href="pricing-table.html">Guía de Pagos y Bancos</a></li>
-                                                    <li><a href="contact.html">Mesa de Partes USS</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contacto</a></li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="right-column">
-                            <a class="header-wa-btn" href="https://wa.me/51986724506" target="_blank"
-                                rel="noopener noreferrer" title="Escribir al WhatsApp oficial CINF">
-                                <span class="header-wa-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.06-1.155-.088-.307-.098-.707-.234-1.218-.456-2.146-.934-3.549-3.131-3.655-3.275-.107-.144-.863-1.149-.863-2.193 0-1.043.546-1.558.74-1.771.194-.213.424-.266.565-.266.141 0 .282.002.404.008.129.006.302-.049.472.361.176.424.6 1.465.652 1.572.053.107.088.234.018.378-.07.144-.106.234-.212.356-.106.123-.222.275-.317.369-.106.106-.217.221-.093.434.124.213.551.91 1.182 1.472.812.723 1.497.947 1.71 1.053.212.107.337.089.462-.054.124-.143.53-.618.672-.83.141-.212.282-.177.472-.106.19.071 1.206.569 1.413.673.208.104.346.156.398.244.053.088.053.51-.091.915z" />
-                                    </svg>
-                                </span>
-                                <span class="header-wa-text">
-                                    <span class="header-wa-label">WhatsApp CINF</span>
-                                    <span class="header-wa-number">+51 986 724 506</span>
-                                </span>
-                            </a>
-                            <a href="/gex" class="header-portal-btn" title="Ingresar al Portal GEX">Portal GEX</a>
-                            <div class="mobile-nav-toggler" title="Abrir menú de navegación">
-                                <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sticky Header -->
+            <!-- Header fijo al bajar: también solo el logo -->
             <div class="sticky-header">
                 <div class="auto-container">
                     <div class="inner-container">
@@ -158,244 +76,11 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="header-divider"></div>
-                            <div class="nav-outer">
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                    <div class="collapse navbar-collapse show clearfix"
-                                        id="navbarSupportedContentSticky">
-                                        <ul class="navigation clearfix">
-                                            <li class="current dropdown"><a href="/">Inicio</a>
-                                                <ul>
-                                                    <li><a href="/">Portada Principal</a></li>
-                                                    <li><a href="about-us.html">Sobre el CINF</a></li>
-                                                    <li><a href="contact.html">Sedes y Horarios</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="about-us.html">Nosotros</a>
-                                                <ul>
-                                                    <li><a href="about-us.html">Quiénes Somos</a></li>
-                                                    <li><a href="team.html">Plana Docente</a></li>
-                                                    <li><a href="testmonial.html">Testimonios de Alumnos</a></li>
-                                                    <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="service.html">Acreditación</a>
-                                                <ul>
-                                                    <li><a href="/gex"><strong>Programa GEX</strong> (Adultos que
-                                                            Trabajan)</a></li>
-                                                    <li><a href="service-details.html">Ruta PROTECH XP (Word &amp;
-                                                            Excel)</a></li>
-                                                    <li><a href="service.html">Plan Tradicional (Computación II y
-                                                            III)</a></li>
-                                                    <li><a href="pricing-table.html">Tarifas y Modalidades (Chiclayo y
-                                                            Filial)</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="service.html">Cursos</a>
-                                                <ul>
-                                                    <li><a href="service-details.html">Ofimática Word 365 (Protech
-                                                            XP)</a></li>
-                                                    <li><a href="service.html">Excel 365 y Analítica de Datos</a></li>
-                                                    <li><a href="service.html">Power BI Business Intelligence</a></li>
-                                                    <li><a href="service.html">AutoCAD 2D / 3D</a></li>
-                                                    <li><a href="service.html">Certificación MOS (Microsoft)</a></li>
-                                                    <li><a href="service.html">Ver Catálogo Completo</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="/tickets" target="_blank"
-                                                    rel="noopener noreferrer">Atención al Alumno</a>
-                                                <ul>
-                                                    <li><a href="/gex"><strong>Portal GEX</strong> Computación</a></li>
-                                                    <li><a href="/chatbot" target="_blank"
-                                                            rel="noopener noreferrer"><strong>Chatbot SipánBot
-                                                                24/7</strong></a></li>
-                                                    <li><a href="/tickets" target="_blank"
-                                                            rel="noopener noreferrer"><strong>Mesa de Tickets y
-                                                                Consultas</strong></a></li>
-                                                    <li><a href="pricing-table.html">Guía de Pagos y Bancos</a></li>
-                                                    <li><a href="contact.html">Mesa de Partes USS</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contacto</a></li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="right-column">
-                            <a class="header-wa-btn" href="https://wa.me/51986724506" target="_blank"
-                                rel="noopener noreferrer" title="Escribir al WhatsApp oficial CINF">
-                                <span class="header-wa-icon">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                        <path
-                                            d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.06-1.155-.088-.307-.098-.707-.234-1.218-.456-2.146-.934-3.549-3.131-3.655-3.275-.107-.144-.863-1.149-.863-2.193 0-1.043.546-1.558.74-1.771.194-.213.424-.266.565-.266.141 0 .282.002.404.008.129.006.302-.049.472.361.176.424.6 1.465.652 1.572.053.107.088.234.018.378-.07.144-.106.234-.212.356-.106.123-.222.275-.317.369-.106.106-.217.221-.093.434.124.213.551.91 1.182 1.472.812.723 1.497.947 1.71 1.053.212.107.337.089.462-.054.124-.143.53-.618.672-.83.141-.212.282-.177.472-.106.19.071 1.206.569 1.413.673.208.104.346.156.398.244.053.088.053.51-.091.915z" />
-                                    </svg>
-                                </span>
-                                <span class="header-wa-text">
-                                    <span class="header-wa-label">WhatsApp CINF</span>
-                                    <span class="header-wa-number">+51 986 724 506</span>
-                                </span>
-                            </a>
-                            <a href="/gex" class="header-portal-btn" title="Ingresar al Portal GEX">Portal GEX</a>
-                            <div class="mobile-nav-toggler" title="Abrir menú de navegación">
-                                <img src="assets/images/icons/icon-bar-2.png" alt="Abrir menú" />
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Mobile Menu -->
-            <div class="mobile-menu">
-                <div class="menu-backdrop"></div>
-                <div class="close-btn" title="Cerrar menú">
-                    <span class="fas fa-times"></span>
-                </div>
-                <nav class="menu-box">
-                    <div class="nav-logo">
-                        <a href="/">
-                            <img src="assets/images/logo-cinf-uss.png" alt="Centro de Informática USS" />
-                        </a>
-                    </div>
-                    <div class="menu-outer">
-                        <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContentMobile">
-                            <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="/">Inicio</a>
-                                    <ul class="sub-menu-hidden">
-                                        <li><a href="/">Portada Principal</a></li>
-                                        <li><a href="about-us.html">Sobre el CINF</a></li>
-                                        <li><a href="contact.html">Sedes y Horarios</a></li>
-                                    </ul>
-                                    <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                                </li>
-                                <li class="dropdown"><a href="about-us.html">Nosotros</a>
-                                    <ul class="sub-menu-hidden">
-                                        <li><a href="about-us.html">Quiénes Somos</a></li>
-                                        <li><a href="team.html">Plana Docente</a></li>
-                                        <li><a href="testmonial.html">Testimonios de Alumnos</a></li>
-                                        <li><a href="faq.html">Preguntas Frecuentes</a></li>
-                                    </ul>
-                                    <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                                </li>
-                                <li class="dropdown"><a href="service.html">Acreditación</a>
-                                    <ul class="sub-menu-hidden">
-                                        <li><a href="/gex"><strong>Programa GEX</strong> (Adultos que Trabajan)</a></li>
-                                        <li><a href="service-details.html">Ruta PROTECH XP (Word &amp; Excel)</a></li>
-                                        <li><a href="service.html">Plan Tradicional (Computación II y III)</a></li>
-                                        <li><a href="pricing-table.html">Tarifas y Modalidades (Chiclayo y Filial)</a>
-                                        </li>
-                                    </ul>
-                                    <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                                </li>
-                                <li class="dropdown"><a href="service.html">Cursos</a>
-                                    <ul class="sub-menu-hidden">
-                                        <li><a href="service-details.html">Ofimática Word 365 (Protech XP)</a></li>
-                                        <li><a href="service.html">Excel 365 y Analítica de Datos</a></li>
-                                        <li><a href="service.html">Power BI Business Intelligence</a></li>
-                                        <li><a href="service.html">AutoCAD 2D / 3D</a></li>
-                                        <li><a href="service.html">Certificación MOS (Microsoft)</a></li>
-                                        <li><a href="service.html">Ver Catálogo Completo</a></li>
-                                    </ul>
-                                    <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                                </li>
-                                <li class="dropdown"><a href="/tickets" target="_blank"
-                                        rel="noopener noreferrer">Atención al Alumno</a>
-                                    <ul class="sub-menu-hidden">
-                                        <li><a href="/gex"><strong>Portal GEX</strong> Computación</a></li>
-                                        <li><a href="/chatbot" target="_blank" rel="noopener noreferrer"><strong>Chatbot
-                                                    SipánBot 24/7</strong></a></li>
-                                        <li><a href="/tickets" target="_blank" rel="noopener noreferrer"><strong>Mesa de
-                                                    Tickets y Consultas</strong></a></li>
-                                        <li><a href="pricing-table.html">Guía de Pagos y Bancos</a></li>
-                                        <li><a href="contact.html">Mesa de Partes USS</a></li>
-                                    </ul>
-                                    <div class="dropdown-btn"><span class="fa fa-angle-right"></span></div>
-                                </li>
-                                <li><a href="contact.html">Contacto</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <h4>Contacto Oficial CINF USS</h4>
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt contact-info-icon"></i> Campus Principal: Km 5 Carretera
-                                a Pimentel</li>
-                            <li><i class="fas fa-building contact-info-icon"></i> Sede Chiclayo: Calle Elías Aguirre 933
-                            </li>
-                            <li>
-                                <i class="fas fa-phone contact-info-icon"></i>
-                                <a href="https://wa.me/51986724506" target="_blank" rel="noopener noreferrer">+51 986
-                                    724 506</a> &bull;
-                                <a href="tel:074481610">(074) 481610</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-envelope contact-info-icon"></i>
-                                <a href="mailto:centro.informatica@uss.edu.pe">centro.informatica@uss.edu.pe</a>
-                            </li>
-                            <li>
-                                <i class="fas fa-clock contact-info-icon"></i> Lun - Vie: 8:00 AM - 6:00 PM | Sáb: 8:00
-                                AM - 1:00 PM
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="social-links">
-                        <ul class="clearfix">
-                            <li><a href="https://web.facebook.com/profile.php?id=61562051030745" target="_blank"
-                                    rel="noopener noreferrer" title="Facebook Centro de Informática USS"><span
-                                        class="fab fa-facebook-f"></span></a></li>
-                            <li><a href="https://www.linkedin.com/company/centro-de-informatica-uss/posts/"
-                                    target="_blank" rel="noopener noreferrer"
-                                    title="LinkedIn Centro de Informática USS"><span
-                                        class="fab fa-linkedin-in"></span></a></li>
-                            <li><a href="https://www.instagram.com/uss_oficial" target="_blank"
-                                    rel="noopener noreferrer" title="Instagram USS"><span
-                                        class="fab fa-instagram"></span></a></li>
-                            <li><a href="https://www.youtube.com/@UniversidadSenordeSipanOficial" target="_blank"
-                                    rel="noopener noreferrer" title="YouTube USS"><span
-                                        class="fab fa-youtube"></span></a></li>
-                            <li><a href="https://wa.me/51986724506" target="_blank" rel="noopener noreferrer"
-                                    title="WhatsApp CINF"><span class="fab fa-whatsapp"></span></a></li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="nav-overlay is-hidden"></div>
         </header>
-
-        <!-- ==========================================
-             MODAL DE BÚSQUEDA
-             ========================================== -->
-        <div id="search-popup" class="search-popup">
-            <div class="popup-inner">
-                <div class="upper-box clearfix">
-                    <figure class="logo-box pull-left">
-                        <a href="/">
-                            <img src="assets/images/logo-cinf-uss.png" alt="Centro de Informática USS" />
-                        </a>
-                    </figure>
-                    <div class="close-search pull-right" title="Cerrar búsqueda">
-                        <span class="far fa-times"></span>
-                    </div>
-                </div>
-                <div class="overlay-layer"></div>
-                <div class="auto-container">
-                    <div class="search-form">
-                        <form action="service.html" method="get">
-                            <div class="form-group">
-                                <fieldset>
-                                    <input type="search" class="form-control"
-                                        placeholder="Buscar cursos, talleres o trámites CINF USS (ej. Excel 365, Acreditación, MOS)..."
-                                        required name="search-input" />
-                                    <button type="submit" title="Buscar">
-                                        <i class="far fa-search"></i>
-                                    </button>
-                                </fieldset>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- ==========================================
              SECCIÓN: SERVICIOS DESTACADOS (1 SOLA PANTALLA)
@@ -407,31 +92,7 @@
                     <h2 class="section_heading_title_big">Plataforma de Atención &amp; Acreditación Estudiantil</h2>
                 </div>
                 <div class="row feature-cards-row justify-content-center">
-                    <!-- Tarjeta 1: Consulta de Cursos y Horarios -->
-                    <div class="col-lg-4 col-md-6 d-flex">
-                        <div class="feature-1-block text-center w-100">
-                            <div class="feature-1-image hvr-img-zoom-1">
-                                <a href="/consulta-cursos" title="Consultar cursos y horarios disponibles">
-                                    <img src="assets/images/resource/feature-image-2.jpg"
-                                        alt="Estudiantes consultando sus cursos y horarios" />
-                                </a>
-                            </div>
-                            <h4 class="feature-1-title">
-                                <a href="/consulta-cursos" class="feature-card-title-link">Cursos y Horarios</a>
-                            </h4>
-                            <p class="feature-1-text">Elige tu carrera y tu modelo de acreditación para ver los cursos,
-                                secciones y horarios disponibles en cada ciclo de apertura.</p>
-                            <div class="feature-1-link">
-                                <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/consulta-cursos"
-                                    title="Consultar cursos y horarios disponibles">
-                                    <img src="assets/images/tech/calendar-schedule.svg"
-                                        alt="Consulta de cursos y horarios" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 2: Asistente de Consultas CINF (chatbot) -->
+                    <!-- Tarjeta 1: Asistente de Consultas CINF (chatbot) -->
                     <div class="col-lg-4 col-md-6 d-flex">
                         <div class="feature-1-block text-center w-100">
                             <div class="feature-1-image hvr-img-zoom-1">
@@ -455,7 +116,7 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 3: Experiencia Laboral / Gente con Experiencia (GEX) -->
+                    <!-- Tarjeta 2: Experiencia Laboral / Gente con Experiencia (GEX) -->
                     <div class="col-lg-4 col-md-6 d-flex">
                         <div class="feature-1-block text-center w-100">
                             <div class="feature-1-image hvr-img-zoom-1">
@@ -473,6 +134,30 @@
                                 <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/gex"
                                     title="Ingresar a Experiencia Laboral (GEX)">
                                     <img src="assets/images/tech/cloud-network.svg" alt="Cisco & Google Cloud GEX" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Consulta de Cursos y Horarios -->
+                    <div class="col-lg-4 col-md-6 d-flex">
+                        <div class="feature-1-block text-center w-100">
+                            <div class="feature-1-image hvr-img-zoom-1">
+                                <a href="/consulta-cursos" title="Consultar cursos y horarios disponibles">
+                                    <img src="assets/images/resource/feature-image-2.jpg"
+                                        alt="Estudiantes consultando sus cursos y horarios" />
+                                </a>
+                            </div>
+                            <h4 class="feature-1-title">
+                                <a href="/consulta-cursos" class="feature-card-title-link">Cursos y Horarios</a>
+                            </h4>
+                            <p class="feature-1-text">Elige tu carrera y tu modelo de acreditación para ver los cursos,
+                                secciones y horarios disponibles en cada ciclo de apertura.</p>
+                            <div class="feature-1-link">
+                                <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/consulta-cursos"
+                                    title="Consultar cursos y horarios disponibles">
+                                    <img src="assets/images/tech/calendar-schedule.svg"
+                                        alt="Consulta de cursos y horarios" />
                                 </a>
                             </div>
                         </div>
@@ -610,6 +295,15 @@
                 </div>
             </div>
         </footer>
+
+        <!-- WhatsApp flotante: solo el ícono en un círculo, abajo a la derecha -->
+        <a class="wa-flotante" href="https://wa.me/51986724506" target="_blank" rel="noopener noreferrer"
+            aria-label="Escribir al WhatsApp del Centro de Informática USS" title="WhatsApp CINF">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" aria-hidden="true">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+            </svg>
+        </a>
 
     </div>
 
