@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico?v=3" />
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico?v=3" />
     <link rel="apple-touch-icon" href="assets/images/favicon.png?v=3" />
-
+    
     <!-- Preload de Recursos Críticos -->
     <link rel="preload" as="image" href="assets/images/logo-cinf-uss.png" />
     <link rel="preload" as="image" href="assets/images/shape/shape-1.png" />
@@ -39,49 +39,15 @@
     <!-- Hojas de Estilo Modulares CINF USS -->
     <link rel="stylesheet" href="assets/css/header-cinf.css?v=10" />
     <link rel="stylesheet" href="assets/css/custom-cinf.css?v=13" />
+    <link rel="stylesheet" href="assets/css/cinf-unified-layout.css?v=1" />
 </head>
 
 <body>
     <div class="boxed_wrapper" id="top">
 
-        <!-- ==========================================
-             HEADER PRINCIPAL: solo el logo (sin menú, Portal GEX ni WhatsApp;
-             el WhatsApp va flotante abajo a la derecha)
-             ========================================== -->
-        <header class="main-header header-style-one">
-            <div class="header-upper">
-                <div class="auto-container">
-                    <div class="inner-container">
-                        <div class="left-column">
-                            <div class="logo-box">
-                                <div class="logo">
-                                    <a href="/">
-                                        <img src="assets/images/logo-cinf-uss.png" alt="Centro de Informática USS" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Header fijo al bajar: también solo el logo -->
-            <div class="sticky-header">
-                <div class="auto-container">
-                    <div class="inner-container">
-                        <div class="left-column">
-                            <div class="logo-box">
-                                <div class="logo">
-                                    <a href="/">
-                                        <img src="assets/images/logo-cinf-uss.png" alt="Centro de Informática USS" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <!-- Header institucional desacoplado (76px, logo oficial USS) -->
+        <header id="cinf-header"></header>
+        <script src="assets/js/cinf-header.js"></script>
 
         <!-- ==========================================
              SECCIÓN: SERVICIOS DESTACADOS (1 SOLA PANTALLA)

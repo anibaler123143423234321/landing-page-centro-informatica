@@ -1,0 +1,134 @@
+/**
+ * Layout Unificado CINF USS - Header y Footer Estandarizados
+ * Altura de Header: 76px exacta, SOLO el logo oficial USS, contenedor 1280px/1440px simétrico
+ */
+
+:root {
+  --cinf-nav-h: 76px;
+  --cinf-blue: #073299;
+  --cinf-blue-dark: #062875;
+  --cinf-text-dark: #0f172a;
+  --cinf-text-muted: #64748b;
+  --cinf-border: #e2e8f0;
+}
+
+/* Header Estandarizado: exactamente 76px de altura, solo el logo oficial USS */
+#cinf-header,
+.cinf-unified-header {
+  position: sticky !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: var(--cinf-nav-h) !important;
+  min-height: var(--cinf-nav-h) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid var(--cinf-border) !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+.cinf-nav-wrap {
+  width: min(100% - 2 * 80px, 1280px) !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+@media (max-width: 1023px) {
+  .cinf-nav-wrap {
+    width: min(100% - 2 * 48px, 1280px) !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .cinf-nav-wrap {
+    width: calc(100% - 2 * 20px) !important;
+  }
+}
+
+.cinf-nav-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  min-height: 44px !important;
+}
+
+.cinf-nav-brand img {
+  height: 44px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+@media (max-width: 639px) {
+  .cinf-nav-brand img {
+    height: 36px !important;
+  }
+}
+
+/* Footer Estandarizado */
+#cinf-footer,
+.cinf-unified-footer {
+  background: #ffffff !important;
+  border-top: 1px solid var(--cinf-border) !important;
+  padding: 1.25rem 1.5rem !important;
+  width: 100% !important;
+}
+
+.cinf-footer-wrap {
+  width: min(100% - 2 * 80px, 1280px) !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+  font-size: 0.75rem !important;
+  color: var(--cinf-text-muted) !important;
+}
+
+@media (max-width: 1023px) {
+  .cinf-footer-wrap {
+    width: min(100% - 2 * 48px, 1280px) !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .cinf-footer-wrap {
+    width: calc(100% - 2 * 20px) !important;
+  }
+}
+
+.cinf-footer-links {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  font-weight: 500 !important;
+}
+
+.cinf-footer-links a {
+  color: inherit !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+}
+
+.cinf-footer-links a:hover {
+  color: var(--cinf-blue) !important;
+  text-decoration: underline !important;
+}
+
+.cinf-footer-links .wa-link {
+  color: #059669 !important;
+  font-weight: 600 !important;
+}
+
+.cinf-footer-links .wa-link:hover {
+  color: #047857 !important;
+}
