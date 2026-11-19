@@ -19,12 +19,12 @@
     <link rel="preload" as="image" href="assets/images/logo-cinf-uss.png" />
     <link rel="preload" as="image" href="assets/images/shape/shape-1.png" />
     <link rel="preload" as="image" href="assets/images/shape/banner-shape.svg" />
-    <link rel="preload" as="image" href="assets/images/resource/feature-image-1.jpg" />
-    <link rel="preload" as="image" href="assets/images/resource/feature-image-2.jpg" />
+    <link rel="preload" as="image" href="assets/images/resource/feature-asistente.jpg" />
+    <link rel="preload" as="image" href="assets/images/resource/feature-cursos.jpg" />
     <link rel="preload" as="image" href="assets/images/resource/feature-image-3.jpg" />
     <link rel="preload" as="image" href="assets/images/shape/shape-microsoft.svg" />
     <link rel="preload" as="image" href="assets/images/shape/shape-gemini.svg" />
-    <link rel="preload" as="image" href="assets/images/shape/footer-shape.svg" />
+    <link rel="preload" as="image" href="assets/images/shape/footer-shape-portada.svg" />
 
     <!-- Hojas de Estilo Base de la Plantilla -->
     <link rel="stylesheet" href="assets/css/modal-video.min.css" data-precedence="next" />
@@ -38,8 +38,9 @@
 
     <!-- Hojas de Estilo Modulares CINF USS -->
     <link rel="stylesheet" href="assets/css/header-cinf.css?v=10" />
-    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=13" />
+    <link rel="stylesheet" href="assets/css/custom-cinf.css?v=17" />
     <link rel="stylesheet" href="assets/css/cinf-unified-layout.css?v=1" />
+    <link rel="stylesheet" href="assets/icons/icon.css?v=1" />
 </head>
 
 <body>
@@ -65,7 +66,8 @@
                             <div class="feature-1-image hvr-img-zoom-1">
                                 <a href="/chatbot" target="_blank" rel="noopener noreferrer"
                                     title="Abrir el Asistente de Consultas CINF">
-                                    <img src="assets/images/resource/feature-image-1.jpg" alt="Asistente de Consultas CINF" />
+                                    <img src="assets/images/resource/feature-asistente.jpg"
+                                        alt="Estudiante escribiendo una consulta en su celular en el campus" />
                                 </a>
                             </div>
                             <h4 class="feature-1-title">
@@ -74,10 +76,14 @@
                             </h4>
                             <p class="feature-1-text">Resuelve tus dudas sobre acreditación en computación, cursos por
                                 carrera, costos, registro y constancias, a cualquier hora.</p>
+                            <!-- Asistente con IA (glifo Lucide "sparkles") y derivación a WhatsApp dentro del chat -->
                             <div class="feature-1-link">
-                                <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/chatbot"
-                                    target="_blank" rel="noopener noreferrer" title="Abrir el Asistente de Consultas CINF">
-                                    <img src="assets/images/tech/ai-chatbot-assistant.svg" alt="Asistente de Consultas CINF" />
+                                <a class="cinf-tools" href="/chatbot" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Abrir el Asistente de Consultas CINF: responde con IA y deriva a WhatsApp">
+                                    <span class="cinf-tools-row">
+                                        <span class="ic-tile ic-tile--48 cinf-ai-tile"><svg class="ic ic-svg" role="img" aria-label="IA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4m2-2h-4"/><circle cx="4" cy="20" r="2"/></svg></span>
+                                        <span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/whatsapp.svg" alt="WhatsApp" width="40" height="40" /></span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -97,10 +103,14 @@
                             </h4>
                             <p class="feature-1-text">Programa flexible para estudiantes adultos que trabajan (EPE),
                                 convalidaciones y cursos CISCO con tarifas preferenciales.</p>
+                            <!-- Herramientas reales: curso Cisco NetAcad y clases por Zoom -->
                             <div class="feature-1-link">
-                                <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/gex"
-                                    title="Ingresar a Experiencia Laboral (GEX)">
-                                    <img src="assets/images/tech/cloud-network.svg" alt="Cisco & Google Cloud GEX" />
+                                <a class="cinf-tools" href="/gex"
+                                    aria-label="Ingresar a Gente con Experiencia (GEX): curso Cisco NetAcad y clases por Zoom">
+                                    <span class="cinf-tools-row">
+                                        <span class="ic-tile ic-tile--48"><img class="ic ic-land" src="assets/icons/cisco.svg" alt="Cisco" width="40" height="34" /></span>
+                                        <span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/zoom.svg" alt="Zoom" width="40" height="40" /></span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -111,8 +121,8 @@
                         <div class="feature-1-block text-center w-100">
                             <div class="feature-1-image hvr-img-zoom-1">
                                 <a href="/consulta-cursos" title="Consultar cursos y horarios disponibles">
-                                    <img src="assets/images/resource/feature-image-2.jpg"
-                                        alt="Estudiantes consultando sus cursos y horarios" />
+                                    <img src="assets/images/resource/feature-cursos.jpg"
+                                        alt="Estudiante revisando su horario de clases en el laboratorio de cómputo" />
                                 </a>
                             </div>
                             <h4 class="feature-1-title">
@@ -120,11 +130,16 @@
                             </h4>
                             <p class="feature-1-text">Elige tu carrera y tu modelo de acreditación para ver los cursos,
                                 secciones y horarios disponibles en cada ciclo de apertura.</p>
+                            <!-- Herramientas reales: cursos de las rutas (Excel, Word, AutoCAD, Power BI) -->
                             <div class="feature-1-link">
-                                <a class="feature-1-link-btn hvr-zoom-1 hvr-zoom-1-primary" href="/consulta-cursos"
-                                    title="Consultar cursos y horarios disponibles">
-                                    <img src="assets/images/tech/calendar-schedule.svg"
-                                        alt="Consulta de cursos y horarios" />
+                                <a class="cinf-tools" href="/consulta-cursos"
+                                    aria-label="Consultar cursos y horarios: Excel, Word, AutoCAD, Power BI y más">
+                                    <span class="cinf-tools-row">
+                                        <span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/xlsx.svg" alt="Excel" width="40" height="40" /></span>
+                                        <span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/docx.svg" alt="Word" width="40" height="40" /></span>
+                                        <span class="ic-tile ic-tile--48"><img class="ic" src="assets/icons/autocad.svg" alt="AutoCAD" width="40" height="37" /></span>
+                                        <span class="ic-tile ic-tile--48"><img class="ic ic-tall" src="assets/icons/power-bi.svg" alt="Power BI" width="30" height="40" /></span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -138,7 +153,8 @@
              ========================================== -->
         <footer class="main-footer">
             <div class="footer-1-shape">
-                <img src="assets/images/shape/footer-shape.svg" alt="" />
+                <!-- Onda en el gris de la sección (#f8fafc): sin franja blanca entre la sección y el pie -->
+                <img src="assets/images/shape/footer-shape-portada.svg" alt="" />
             </div>
             <div class="footer-1-middle">
                 <div class="auto-container">
@@ -244,7 +260,7 @@
                                 <p class="mb_10"><strong>Campus Universitario:</strong> Km 5 Carretera a Pimentel</p>
                                 <p class="mb_10"><strong>WhatsApp:</strong> +51 986 724 506</p>
                                 <p class="mb_10"><strong>Central Telefónica:</strong> (074) 481610</p>
-                                <p class="mb_0"><strong>Horario:</strong> Lun - Vie 8am - 6pm | Sáb 8am - 1pm</p>
+                                <p class="mb_0"><strong>Horario:</strong> Lun - Vie 8am - 6pm | Sáb 9am - 12pm</p>
                             </div>
                         </div>
                     </div>
@@ -254,7 +270,8 @@
                 <div class="auto-container">
                     <div class="footer-bottom-row d-flex align-items-center justify-content-between">
                         <p class="footer-bottom-text">© 2026 Centro de Informática (CINF · PROTECH XP) — Universidad
-                            Señor de Sipán. Todos los derechos reservados.</p>
+                            Señor de Sipán. Todos los derechos reservados.<br /><span class="footer-tm">Los nombres y logotipos de
+                            productos son marcas de sus respectivos dueños.</span></p>
                         <div class="footer-bottom-link">
                             <a href="/">Términos &amp; Condiciones</a> | <a href="contact.html">Soporte TI</a>
                         </div>

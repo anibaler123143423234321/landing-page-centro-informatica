@@ -118,8 +118,8 @@ Monitor en un estudio de arquitectura que muestra, sobre fondo oscuro, el plano 
 
 ### 11. Chatbot
 
-- **Archivo:** `assets/images/resource/feature-image-1.jpg` (1376 × 768 px)
-- **Se usa en:** tarjeta del chatbot en `index.html`
+- **Archivo:** `assets/images/resource/feature-image-1.jpg` (eliminado el 18 nov 2026: ninguna página lo usaba)
+- **Reemplazo:** la tarjeta de la portada usa `feature-asistente.jpg`; ver «Tarjeta Asistente de Consultas de la portada» al final.
 
 ```text
 Un asistente virtual amigable representado como un pequeño robot holográfico de luz cian que emerge de la pantalla de un teléfono apoyado en una mesa oscura. A su alrededor flotan burbujas de conversación vacías. Fondo de sala de servidores desenfocada en azul. Sin texto. Formato horizontal 16:9.
@@ -189,11 +189,28 @@ Recomendación de encuadre: que las cuatro fotos tengan la cabeza a la misma alt
 | `assets/images/logo-cinf-uss.png` | Logotipo institucional. |
 
 
-### Tarjeta «Cursos y Horarios» de la portada
+### Tarjeta «Asistente de Consultas» de la portada
 
-- **Archivo:** `assets/images/resource/feature-image-4.jpg` (1376 × 768 px)
-- **Se usa en:** tercera tarjeta de «Servicios Destacados» en `index.html` (hoy usa `feature-image-2.jpg` de forma provisional; al generar esta, cambia el `src`)
+- **Archivo:** `assets/images/resource/feature-asistente.jpg` (1376 × 768 px)
+- **Se usa en:** primera tarjeta de «Servicios Destacados» en `index.html`
+- **Generada:** 18 nov 2026 en Gemini (Crear imágenes, 16:9). Mismo estilo que la foto de GEX (`feature-image-3.jpg`): campus, luz natural, una persona al centro.
 
 ```text
-Una estudiante universitaria peruana sonriente revisa en su laptop un calendario académico con bloques de colores azul y naranja, sin texto legible. A su lado, un teléfono muestra una cuadrícula de horario. Escritorio claro en una biblioteca moderna, luz natural, tonos azul institucional. Sin logotipos ni marcas. El sujeto principal en la mitad superior de la imagen. Formato horizontal 16:9.
+Fotografía editorial realista, horizontal 16:9. Una estudiante universitaria peruana de unos 20 años, sonriente, sentada en una banca del patio de un campus universitario moderno, escribe una consulta en su celular con ambas manos; a su lado, sobre la banca, una mochila y un cuaderno. Plano medio, la estudiante centrada en el encuadre y mirando su celular, con la cabeza y los hombros en el tercio superior. Detrás, desenfocado, un edificio universitario moderno de concreto claro y vidrio, árboles, palmeras y algunos estudiantes caminando. Luz natural de mañana soleada, profundidad de campo media, colores limpios. Paleta: azul institucional (#073299) en su ropa o mochila, toques de cian y un pequeño acento naranja (#ff5e14). Ropa casual universitaria. Evitar: texto legible, pantalla del celular visible, logotipos o marcas, marcas de agua, manos o rostros deformes, dedos de más.
+```
+
+### Tarjeta «Cursos y Horarios» de la portada
+
+- **Archivo:** `assets/images/resource/feature-cursos.jpg` (1376 × 768 px)
+- **Se usa en:** tercera tarjeta de «Servicios Destacados» en `index.html`
+- **Generada:** 18 nov 2026 en Gemini (Crear imágenes, 16:9), con una edición posterior para quitar un detalle naranja con forma de logo en la chaqueta.
+
+```text
+Fotografía editorial realista, horizontal 16:9. Un estudiante universitario peruano de unos 20 años, sonriente, sentado frente a un escritorio en un laboratorio de cómputo universitario moderno y luminoso, revisa su horario de clases en una laptop. La cámara está a un lado en ángulo de tres cuartos, de modo que se ve su rostro y también la pantalla: una cuadrícula de horario semanal con bloques de colores azul, cian y naranja, sin texto legible. Plano medio, el estudiante centrado, con la cabeza y los hombros en el tercio superior. Detrás, desenfocado, filas de computadoras con monitores encendidos, dos o tres compañeros trabajando y grandes ventanales con luz natural de mañana. Escena ordenada y limpia, profundidad de campo media. Paleta: azul institucional (#073299) en su ropa, toques de cian y un pequeño acento naranja (#ff5e14). Ropa casual universitaria. Evitar: texto legible, logotipos o marcas, marcas de agua, manos o rostros deformes, dedos de más, escritorio desordenado.
+```
+
+Edición aplicada después:
+
+```text
+Edita esta última imagen: quita el pequeño detalle naranja del pecho de la chaqueta azul para que la chaqueta quede completamente lisa, sin ningún logo. No cambies nada más: misma persona, misma pose, mismo encuadre 16:9, misma pantalla y mismo fondo.
 ```
