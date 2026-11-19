@@ -223,8 +223,8 @@
     transform: scale(1.18) !important;
 }
 
-/* Fila de íconos reales al pie de cada tarjeta (assets/icons, vía icons.mjs).
-   Tokens que lee assets/icons/icon.css, con los colores del portal. */
+/* Fila de íconos reales al pie de cada tarjeta (assets/images/logos, vía icons.mjs; dentro de images/ porque el proxy de informatica-uss solo sirve assets/css|images|js|media).
+   Tokens que lee assets/css/icon.css, con los colores del portal. */
 .cinf-services-section {
     --bg: #ffffff;
     --ink: #002B49;
